@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --main-100: #e5eefb;
+    --main-200: #cbddf6;
+    --main-300: #b2cbf2;
+    --main-400: #98baed;
+    --main-500: #7ea9e9;
+    --main-600: #6587ba;
+    --main-700: #4c658c;
+    --main-800: #32445d;
+    --main-900: #19222f;
+    --main-trs: #7ea9e971;
+    --borderWidth: 2px;
+    --typo: 'Poppins', sans-serif;
+    --ts1: 22px;
+    --ts2: 20px;
+    --ts3: 18px;
+    --ts4: 16px;
+    --ts5: 14px;
+    --ts6: 12px;
+    --transition-g: 0.3s;
+    --transition-f: 0.15s;
+    --transition-s: 0.6s;
+}
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    -webkit-tap-highlight-color: var(--main-trs);
+}
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+*::selection {
+    background: var(--main-trs);
+}
+a {
+    text-decoration: none;
+}
+.pnt {
+    cursor: pointer;
+}
