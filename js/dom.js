@@ -10,7 +10,7 @@ com.logoHOME = /*html*/ `
     </a>
 `
 com.h1 = function(title) {
-    let inner = /*html*/ `<h1>${title}</h1>`
+    let inner = /*html*/ `<h1 class="fullw">${title}</h1>`
     return inner
 }
 // https://source.unsplash.com/900x400?pet
@@ -44,6 +44,28 @@ com.e.carrousel = function(childs) {
         </div>
     `
     return c_slide
+}
+com.e.card = function(childs) {
+    let cardsHTML = ''
+    childs.forEach(function(card){
+        let i_card = /*html*/ `<div class="card">
+            ${card['icon']}
+            <p>${card['text']}</p>
+        </div>`
+        cardsHTML += i_card
+    })
+    return cardsHTML
+}
+com.e.brands = function(childs) {
+    let brandsHTML = ''
+    childs.forEach(function(name){
+        let fileSrc = './media/brands/' + name.replace(/\s/g,'-') + '.png'
+        let i_brand = /*html*/ `<div class="brand">
+            <img src="${fileSrc}" alt="${name}"/>
+        </div>`
+        brandsHTML += i_brand
+    })
+    return brandsHTML
 }
 let elmnt = document.getElementsByClassName('app')[0]
 let dom = /*html*/ `
@@ -122,6 +144,34 @@ let dom = /*html*/ `
                 </div>
             </div>
         </div>
+        <hr/>
+    </section>
+    <section class="best">
+        ${com.h1('Beneficios de trabajar con nosotros')}
+        <div class="section">
+            ${
+                com.e.card([
+                    {
+                        icon: '<i class="fa-solid fa-truck-fast"></i>',
+                        text: 'Ofrecemos entregas rápidas, hasta solo un día de demora'
+                    },
+                    {
+                        icon: '<i class="fa-solid fa-mobile"></i>',
+                        text: 'Gestiona tus procesos desde cualquier lugar con la app móvil'
+                    },
+                    {
+                        icon: '<i class="fa-solid fa-cart-shopping"></i>',
+                        text: 'Tu escoges tus cantidades, no hay monto mínimo'
+                    },
+                ])
+            }
+        </div>
+    </section>
+    <section class="brands">
+        ${com.h1('Marcas con las que trabajamos')}
+        <div class="section brands_g fullw">
+            ${com.e.brands(['3m', 'alicorp', 'backus', 'cartavio', 'cbc', 'gloria', 'kimberly-clark', 'nestle', 'p-g', 'pepsico', 'unilever'])}
+        </div>
     </section>
 </main>
 <div class="footer">
@@ -133,7 +183,8 @@ let dom = /*html*/ `
   `
     elmnt.addEmt(dom)
     setTimeout(function() {
-        $('.loader').remove()
+        // $('.loader').remove()
+        $('.loader').classList.toggle('show')
     }, 3e2)
     }
 )()

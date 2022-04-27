@@ -1,4 +1,7 @@
-.loader {
+.loader:not(.show) {
+    display: none;
+}
+.loader.show {
     position: fixed;
     left: 0;
     right: 0;
@@ -11,7 +14,7 @@
     justify-content: center;
 }
 
-.dot-overtaking {
+.show .dot-overtaking {
     position: relative;
     width: 12px;
     height: 12px;
@@ -22,8 +25,8 @@
     box-shadow: 0 -20px 0 0;
     animation: dotOvertaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
 }
-.dot-overtaking::before,
-.dot-overtaking::after {
+.show .dot-overtaking::before,
+.show .dot-overtaking::after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -36,11 +39,11 @@
     color: var(--main-800);
     box-shadow: 0 -20px 0 0;
 }
-.dot-overtaking::before {
+.show .dot-overtaking::before {
     animation: dotOvertaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
     animation-delay: .3s;
 }
-.dot-overtaking::after {
+.show .dot-overtaking::after {
     animation: dotOvertaking 1.5s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
     animation-delay: .6s;
 }
