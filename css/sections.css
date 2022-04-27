@@ -5,7 +5,7 @@ main {
 }
 section {
     width: 100%;
-    margin-block-start: var(--ts1);
+    margin-block-start: calc(var(--ts1) * 2);
 }
 section h1 {
     background-color: var(--main-500);
@@ -73,7 +73,7 @@ section h1::before {
     display: flex;
     gap: 12px;
     justify-content: center;
-    margin-block-start: 24px;
+    margin-block-start: 36px;
 }
 .best .section .card {
     display: flex;
