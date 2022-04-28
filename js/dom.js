@@ -170,7 +170,7 @@ let dom = /*html*/ `
     <section class="brands">
         ${com.h1('Marcas con las que trabajamos')}
         <div class="section brands_g fullw">
-            ${com.e.brands(['3m', 'alicorp', 'backus', 'cartavio', 'cbc', 'gloria', 'kimberly-clark', 'nestle', 'p-g', 'pepsico', 'unilever'])}
+            ${com.e.brands(['3m', 'alicorp', 'backus', 'cartavio', 'cbc', 'clorox', 'colgate', 'gloria', 'johnson', 'kimberly-clark', 'molitalia', 'nestle', 'p-g', 'pepsico', 'protisa', 'quaker', 'sao', 'sapolio', 'savital', 'tabernero', 'unilever'])}
         </div>
     </section>
 </main>
