@@ -1,18 +1,20 @@
 .header {
-    /* position: absolute; */
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     padding: 8px 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 999;
     background-color: white;
     box-shadow: 0px -4px 8px 3px var(--main-700);
+    height: var(--max-header);
 }
 .header .logoMain {
-    height: 2.2rem;
+    height: 100%;
+    padding: 6px;
 }
 .header .logoMain img {
     height: 100%;
@@ -30,7 +32,7 @@
     .header nav {
         position: fixed;
         z-index: 5;
-        top: 0;
+        top: var(--max-header);
         left: 100%;
         bottom: 0;
         left: 0;
@@ -42,14 +44,17 @@
         transition: all var(--transition-g);
         transition-timing-function: ease-in-out;
     }
+    .scrolled .header nav {
+        top: var(--max-header);
+    }
     .open-menu .header nav {
         transform: translateX(0%);
-        box-shadow: -4px 0px 8px 1px var(--main-900);
+        box-shadow: -4px 9px 8px 1px var(--main-900);
     }
     nav {
         padding-left: 8px;
         padding-right: 8px;
-        padding-top: 80px;
+        padding-top: 8px;
     }
     .header nav .btn-g {
         font-size: var(--ts3);
@@ -66,5 +71,27 @@
     .header nav .btn-g {
         font-size: var(--ts4);
         margin-inline-start: 10px;
+    }
+}
+
+.scrolled .header {
+    position: fixed;
+    height: var(--min-header);
+    backdrop-filter: blur(16px) brightness(1.15) saturate(1.5);
+    background-color: rgba(255, 255, 255, 0.85);
+    animation-name: down-header;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.scrolled .header .logoMain {
+    padding: 0px;
+}
+@keyframes down-header {
+    from {
+        transform: translateY(-150%);
+    }
+    to {
+        transform: translateY(0%);
     }
 }

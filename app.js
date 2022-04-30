@@ -72,7 +72,7 @@ Object.prototype.myorder = function () {
 
 window.addEventListener('load', function(){
     setTimeout(function(){
-        (['cursor', 'dom', 'menu', 'slide']).forEach(function(fileName){
+        (['cursor', 'dom', 'menu', 'slide', 'header']).forEach(function(fileName){
             let s = document.createElement('script')
             $('.javascript').appendChild(s)
             s.src = './js/' + fileName + '.js'

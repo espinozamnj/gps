@@ -23,6 +23,8 @@
     --transition-f: 0.15s;
     --transition-s: 0.6s;
     --max-w: 700px;
+    --max-header: 80px;
+    --min-header: 50px;
 }
 html {
     scroll-behavior: smooth;

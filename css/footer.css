@@ -1,0 +1,63 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: var(--main-500);
+    font-family: var(--typo);
+}
+.footer .foo-bar {
+    margin-block-start: 22px;
+    background-color: var(--main-800);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    font-size: var(--ts5);
+}
+.footer .foo {
+    display: flex;
+    overflow: hidden;
+}
+.footer .logo-left {
+    width: 66%;
+    padding: 22px;
+}
+.footer .foo-info {
+    width: 33%;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+.footer .logo-left img {
+    max-height: 100px;
+}
+.footer .data {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-block-end: 6px;padding-left: 2em;
+    position: relative;
+}
+.footer .data i {
+    width: 2em;
+    text-align: center;
+    position: absolute;
+    left: 0;
+}
+.footer .data span {
+    white-space: nowrap;
+}
+.footer .foo-info .social {
+    margin-block-start: 36px;
+}
+.footer .foo-info .social a {
+    font-size: var(--ts1);
+    background: white;
+    width: calc(var(--ts1) * 2);
+    height: calc(var(--ts1) * 2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--ts1);
+    margin-inline-end: 10px;
+}

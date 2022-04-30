@@ -67,23 +67,8 @@ com.e.brands = function(childs) {
     })
     return brandsHTML
 }
-let elmnt = document.getElementsByClassName('app')[0]
+let elmnt = document.getElementById('inside')
 let dom = /*html*/ `
-<div class="header">
-    ${com.logoHOME}
-    <nav>
-        <div class="pnt btn-g">Nosotros</div>
-        <div class="pnt btn-g">Contacta</div>
-        <div class="pnt btn-g">Zona clientes</div>
-    </nav>
-    <div class="pnt menu-movil">
-        <div class="bars">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</div>
 <main class="main">
     ${
         com.e.carrousel([
@@ -173,6 +158,24 @@ let dom = /*html*/ `
             ${com.e.brands(['3m', 'alicorp', 'backus', 'cartavio', 'cbc', 'clorox', 'colgate', 'gloria', 'johnson', 'kimberly-clark', 'molitalia', 'nestle', 'p-g', 'pepsico', 'protisa', 'quaker', 'sao', 'sapolio', 'savital', 'tabernero', 'unilever'])}
         </div>
     </section>
+    <section class="clients">
+        <div class="fullw">
+            ${com.h1('Zona clientes')}
+            <div class="access">
+                <div class="list">
+                    <button class="cliente-btn pnt">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Descarga tus documentos</span>
+                    </button>
+                    <button class="cliente-btn pnt">
+                        <i class="fa-solid fa-mobile"></i>
+                        <span>Obtén la aplicación</span>
+                    </button>
+                </div>
+                <div class="embed"></div>
+            </div>
+        </div>
+    </section>
 </main>
 <div class="footer">
 
@@ -186,5 +189,4 @@ let dom = /*html*/ `
         // $('.loader').remove()
         $('.loader').classList.toggle('show')
     }, 3e2)
-    }
-)()
+})()

@@ -2,6 +2,7 @@ main {
     display: flex;
     flex-direction: column;
     padding-bottom: 100vh;
+    margin-top: var(--max-header);
 }
 section {
     width: 100%;
@@ -12,18 +13,19 @@ section h1 {
     font-family: var(--typo);
     font-size: var(--ts2);
     color: white;
-    padding: calc(var(--ts2) / 2) calc(var(--ts2) / 1);
     width: 100%;
     position: relative;
 }
 @media screen and (min-width: 800px) {
     section h1 {
         max-width: 730px;
+        padding: calc(var(--ts2) / 2) calc(var(--ts2) / 1);
     }
 }
 @media screen and (max-width: 800px) {
     section h1 {
         max-width: calc(100vw - 97px) !important;
+        padding: calc(var(--ts6) / 2) calc(var(--ts2) / 1);
     }
 }
 section h1::before {
@@ -45,6 +47,21 @@ section h1::before {
     gap: var(--ts2);
     margin-block-start: 34px;
 }
+@media screen and (max-width: 600px) {
+    .about .details {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px;
+    }
+}
+@media screen and (min-width: 600px) {
+    .about .details {
+        flex-direction: row;
+    }
+    .about .detail {
+        max-width: 400px;
+    }
+}
 .about .h3 {
     font-size: var(--ts3);
     margin-block-end: 16px;
@@ -52,7 +69,6 @@ section h1::before {
 }
 .about .detail {
     font-family: var(--typo);
-    max-width: 400px;
 }
 .about .text {
     font-size: var(--ts5);
@@ -77,6 +93,7 @@ section h1::before {
 }
 .best .section .card {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     padding: 12px;
@@ -128,4 +145,49 @@ section h1::before {
     left: 15%;
     right: 15%;
     bottom: 15%;
+    pointer-events: none;
+}
+.clients .fullw {
+    background: var(--main-200);
+    padding-bottom: 24px;
+}
+.clients h1::before {
+    content: '';
+    visibility: hidden;
+}
+.clients h1 {
+    color: var(--main-500);
+}
+.clients .access {
+    display: flex;
+    padding: 12px;
+    gap: 12px;
+}
+.embed {
+    background: white;
+    width: 100%;
+    flex: 1;
+    padding: 12px;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 40%;
+}
+.cliente-btn {
+    background: white;
+    border: none;
+    padding: 8px 10px;
+    color: var(--main-500);
+    position: relative;
+    font-size: var(--ts3);
+    display: flex;
+}
+.cliente-btn span {
+    padding-left: calc(var(--ts3) * 1.8);
+}
+.cliente-btn i {
+    position: absolute;
+    width: var(--ts1);
 }
