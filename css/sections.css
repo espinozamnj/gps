@@ -86,6 +86,7 @@ section h1::before {
 }
 .map .section {
     display: flex;
+    margin-block-start: 24px;
     gap: 24px;
 }
 @media screen and (max-width: 800px){
@@ -98,7 +99,7 @@ section h1::before {
         flex-direction: row;
     }
     .map .section .map-container {
-        width: 40%;
+        width: 60%;
         overflow: visible;
     }
     .map .section .map-container svg {
@@ -109,27 +110,32 @@ section h1::before {
         filter: drop-shadow(-8px 7px 5px #00000097);
     }
     .map .section .info-map {
-        width: 60%;
+        width: 40%;
     }
 }
+.map .title {
+    font-size: var(--ts2);
+}
+.map .info-map {
+    font-family: var(--typo);
+}  
 .map #map_peru *.on {
-    fill: red;
+    fill: var(--main-500);
 }
 .map #peru-cities {
     margin: 0;
-    padding: 0;
+    padding-left: 1.9em;
     columns: 100px auto;
-    column-gap: 8px;
-    list-style: none;
+    column-gap: 2em;
+    list-style: circle;
 }
 .map #peru-cities li {
     padding: 2px 4px;
-    display: inline-block;
+    /* display: inline-block; */
     width: 100%;
 }
 .map #peru-cities li.on {
-    background: red;
-    color: white;
+    background: var(--main-200);
     font-weight: bold;
 }
 .best .section {
