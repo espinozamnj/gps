@@ -1,7 +1,6 @@
 main {
     display: flex;
     flex-direction: column;
-    padding-bottom: 100vh;
     margin-top: var(--max-header);
 }
 section {
@@ -85,6 +84,54 @@ section h1::before {
     padding-top: var(--ts2);
     justify-content: flex-end;
 }
+.map .section {
+    display: flex;
+    gap: 24px;
+}
+@media screen and (max-width: 800px){
+    .map .section {
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 800px){
+    .map .section {
+        flex-direction: row;
+    }
+    .map .section .map-container {
+        width: 40%;
+        overflow: visible;
+    }
+    .map .section .map-container svg {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform: rotate3d(2, 2, 1, 320deg);
+        filter: drop-shadow(-8px 7px 5px #00000097);
+    }
+    .map .section .info-map {
+        width: 60%;
+    }
+}
+.map #map_peru *.on {
+    fill: red;
+}
+.map #peru-cities {
+    margin: 0;
+    padding: 0;
+    columns: 100px auto;
+    column-gap: 8px;
+    list-style: none;
+}
+.map #peru-cities li {
+    padding: 2px 4px;
+    display: inline-block;
+    width: 100%;
+}
+.map #peru-cities li.on {
+    background: red;
+    color: white;
+    font-weight: bold;
+}
 .best .section {
     display: flex;
     gap: 12px;
@@ -149,7 +196,7 @@ section h1::before {
 }
 .clients .fullw {
     background: var(--main-200);
-    padding-bottom: 24px;
+    padding-bottom: 36px;
 }
 .clients h1::before {
     content: '';
@@ -161,21 +208,37 @@ section h1::before {
 .clients .access {
     display: flex;
     padding: 12px;
-    gap: 12px;
 }
-.embed {
+.clients .access .embed {
     background: white;
     width: 100%;
     flex: 1;
     padding: 12px;
 }
-.list {
+@media screen and (min-width: 800px) {
+    .clients .access {
+        flex-direction: row;
+        gap: 12px;
+    }
+    .clients .access .list {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .clients .access {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .clients .access .list {
+        width: 100%;
+    }
+}
+.clients .access .list {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 40%;
 }
-.cliente-btn {
+.clients .access .cliente-btn {
     background: white;
     border: none;
     padding: 8px 10px;
@@ -184,10 +247,10 @@ section h1::before {
     font-size: var(--ts3);
     display: flex;
 }
-.cliente-btn span {
+.clients .access .cliente-btn span {
     padding-left: calc(var(--ts3) * 1.8);
 }
-.cliente-btn i {
+.clients .access .cliente-btn i {
     position: absolute;
     width: var(--ts1);
 }
