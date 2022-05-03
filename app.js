@@ -1,6 +1,10 @@
 var $$ = (d) => {return document.querySelectorAll(d)}
 var $ = (d) => {return $$(d)[0]}
 var db = $('body')
+var com = {
+    e: {},
+}
+
 Object.prototype.addEmt = function(str) {
     let ts = this
     // let htmlELM = new DOMParser().parseFromString(str, "text/xml")
@@ -69,13 +73,48 @@ Object.prototype.myorder = function () {
     }
     return order
 }
+Object.prototype.inserJS = function (files) {
+    let ts = this
+    files.forEach(function(fileName){
+        let s = document.createElement('script')
+        s.src = './js/' + fileName + '.js'
+        ts.appendChild(s)
+    })
+}
+var loadHTML = function(fileName) {
+    $('.loader').classList.add('show')
+    fetch('./pages/' + fileName + '.html').then(function (response) {
+        response.text().then(function (plainText) {
+            // $('#content').innerHTML = plainText
+            $('#content').addEmt(eval('`' + plainText.trim() + '`'))
+            setTimeout(function () {
+                let require = $('#require')
+                require.innerHTML = ''
+                let js = document.createElement('script')
+                js.src = './pages/' + fileName + '.js'
+                js.on(['load'], function(){
+                    $('.loader').classList.remove('show')
+                })
+                require.appendChild(js)
+                let css = document.createElement('link')
+                css.rel = 'stylesheet'
+                css.href = './css/' + fileName + '.css'
+                require.appendChild(css)
+            })
+        })
+    })
+}
 
 window.addEventListener('load', function(){
     setTimeout(function(){
-        (['cursor', 'dom', 'menu', 'slide', 'header']).forEach(function(fileName){
-            let s = document.createElement('script')
-            $('.javascript').appendChild(s)
-            s.src = './js/' + fileName + '.js'
-        })
-    }, 3e2)
+        $('.javascript').inserJS(['cursor', 'dom', 'menu', 'header', 'data_cities'])
+        setTimeout(function () {
+            if (location.hash.length > 1) {
+                loadHTML('city')
+            } else {
+                loadHTML('home')
+            }
+        }, 8e2)
+    }, 1e2)
 })
+

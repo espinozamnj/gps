@@ -1,10 +1,92 @@
+@import url('global.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
 @import url('cursor.css');
 @import url('loader.css');
 @import url('header.css');
 @import url('buttons.css');
-@import url('slides.css');
-@import url('sections.css');
 @import url('footer.css');
 @import url('menu.css');
 @import url('send-msg.css');
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    -webkit-tap-highlight-color: var(--main-trs);
+}
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+*::selection {
+    background: var(--main-trs);
+}
+a {
+    text-decoration: none;
+}
+.pnt {
+    cursor: pointer;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--max-header);
+}
+.main section > *:not(.fullw) {
+    max-width: var(--max-w);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 12px;
+}
+section {
+    width: 100%;
+    margin-block-start: calc(var(--ts1) * 2);
+}
+section h1 {
+    background-color: var(--main-500);
+    font-family: var(--typo);
+    font-size: var(--ts2);
+    color: white;
+    width: 100%;
+    position: relative;
+}
+@media screen and (min-width: 800px) {
+    section h1 {
+        max-width: 730px;
+        padding: calc(var(--ts2) / 2) calc(var(--ts2) / 1);
+    }
+}
+@media screen and (max-width: 800px) {
+    section h1 {
+        max-width: calc(100vw - 97px) !important;
+        padding: calc(var(--ts6) / 2) calc(var(--ts2) / 1);
+    }
+}
+section h1::before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    background-color: var(--main-500);
+    transform: translateX(100%);
+    clip-path: polygon(100% 0%, 62% 49%, 100% 100%, 0% 100%, 0% 50%, 0% -1%);
+}
+hr {
+    border-style: solid;
+    border-top-color: var(--main-600);
+    border-width: var(--borderWidth) 0px 0px 0px;
+    margin-block-start: 30px;
+    margin-block-end: 48px;
+}

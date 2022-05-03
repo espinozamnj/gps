@@ -1,44 +1,4 @@
-main {
-    display: flex;
-    flex-direction: column;
-    margin-top: var(--max-header);
-}
-section {
-    width: 100%;
-    margin-block-start: calc(var(--ts1) * 2);
-}
-section h1 {
-    background-color: var(--main-500);
-    font-family: var(--typo);
-    font-size: var(--ts2);
-    color: white;
-    width: 100%;
-    position: relative;
-}
-@media screen and (min-width: 800px) {
-    section h1 {
-        max-width: 730px;
-        padding: calc(var(--ts2) / 2) calc(var(--ts2) / 1);
-    }
-}
-@media screen and (max-width: 800px) {
-    section h1 {
-        max-width: calc(100vw - 97px) !important;
-        padding: calc(var(--ts6) / 2) calc(var(--ts2) / 1);
-    }
-}
-section h1::before {
-    content: "";
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 60px;
-    background-color: var(--main-500);
-    transform: translateX(100%);
-    clip-path: polygon(100% 0%, 62% 49%, 100% 100%, 0% 100%, 0% 50%, 0% -1%);
-}
+@import url('slides.css');
 
 /* CUSTOM */
 .about .details {
@@ -101,12 +61,13 @@ section h1::before {
     .map .section .map-container {
         width: 60%;
         overflow: visible;
+        margin-inline-end: 24px;
     }
     .map .section .map-container svg {
         width: 100%;
         height: 100%;
-        transform-style: preserve-3d;
-        transform: rotate3d(2, 2, 1, 320deg);
+        /* transform-style: preserve-3d; */
+        /* transform: rotate3d(2, 2, 1, 320deg); */
         filter: drop-shadow(-8px 7px 5px #00000097);
     }
     .map .section .info-map {
@@ -118,14 +79,20 @@ section h1::before {
 }
 .map .info-map {
     font-family: var(--typo);
-}  
+}
+.map #map_peru *.enable{
+    fill:var(--main-200);
+    stroke:var(--main-100);
+}
 .map #map_peru *.on {
     fill: var(--main-500);
+    stroke:var(--main-100);
 }
 .map #peru-cities {
     margin: 0;
+    margin-block-start: 16px;
     padding-left: 1.9em;
-    columns: 100px auto;
+    /* columns: 100px auto; */
     column-gap: 2em;
     list-style: circle;
 }
@@ -200,9 +167,13 @@ section h1::before {
     bottom: 15%;
     pointer-events: none;
 }
-.clients .fullw {
+.clients {
     background: var(--main-200);
     padding-bottom: 36px;
+}
+.clients h1 {
+    background-color: transparent !important;
+    color: var(--main-500);
 }
 .clients h1::before {
     content: '';
