@@ -52,9 +52,23 @@ section {
     margin-block-start: calc(var(--ts1) * 2);
 }
 section h1 {
+    background-color: transparent;
+    font-family: var(--typo);
+    font-size: var(--ts1);
+    color: white;
+    width: 100%;
+    position: relative;
+}
+section h2 {
+    font-family: var(--typo);
+    font-size: var(--ts3);
+    color: var(--main-500);
+}
+/*
+section h1 {
     background-color: var(--main-500);
     font-family: var(--typo);
-    font-size: var(--ts2);
+    font-size: var(--ts1);
     color: white;
     width: 100%;
     position: relative;
@@ -82,7 +96,7 @@ section h1::before {
     background-color: var(--main-500);
     transform: translateX(100%);
     clip-path: polygon(100% 0%, 62% 49%, 100% 100%, 0% 100%, 0% 50%, 0% -1%);
-}
+}*/
 hr {
     border-style: solid;
     border-top-color: var(--main-600);

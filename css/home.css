@@ -141,6 +141,7 @@
     overflow-x: hidden;
 }
 .brands_g .marquee {
+    margin-block-start: 16px;
     display: block;
     position: relative;
 }

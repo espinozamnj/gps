@@ -9,6 +9,10 @@
         let inner = /*html*/ `<h1 class="fullw">${title}</h1>`
         return inner
     }
+    com.h2 = function(title) {
+        let inner = /*html*/ `<h2>${title}</h2>`
+        return inner
+    }
     // https://source.unsplash.com/900x400?pet
     com.e.carrousel = function(childs) {
         let slides = ''

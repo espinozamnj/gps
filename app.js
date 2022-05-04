@@ -113,6 +113,7 @@ window.addEventListener('load', function(){
                 loadHTML('city')
             } else {
                 loadHTML('home')
+                // loadHTML('about')
             }
         }, 8e2)
     }, 1e2)
