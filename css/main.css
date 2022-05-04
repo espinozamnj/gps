@@ -55,7 +55,7 @@ section h1 {
     background-color: transparent;
     font-family: var(--typo);
     font-size: var(--ts1);
-    color: white;
+    color: var(--main-500);
     width: 100%;
     position: relative;
 }
