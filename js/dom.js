@@ -56,9 +56,9 @@
         let brandsHTML = ''
         childs.forEach(function(name){
             let fileSrc = './media/brands/' + name.replace(/\s/g,'-') + '.png'
-            let i_brand = /*html*/ `<div class="brand">
+            let i_brand = /*html*/ `<span class="brand">
                 <img src="${fileSrc}" alt="${name}"/>
-            </div>`
+            </span>`
             brandsHTML += i_brand
         })
         return brandsHTML

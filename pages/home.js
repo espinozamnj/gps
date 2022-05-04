@@ -1,3 +1,3 @@
 (function(){
-    $('#require').inserJS(['map', 'slide'])
+    $('#require').inserJS(['map', 'slide', 'carrousel'])
 })()
