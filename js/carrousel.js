@@ -1,10 +1,11 @@
 (function(){
     function handleMarquee() {
         const marquee = $$(".marquee")
-        let speed = 1.5
+        let speed = 0.6
         let lastScrollPos = 0
         let timer
         marquee.forEach(function (el) {
+            console.log(el)
             const container = el.querySelector(".inner")
             const content = el.querySelector(".inner > *")
             //Get total width
@@ -24,18 +25,17 @@
                 window.requestAnimationFrame(loop)
             }
             loop()
+            el.addEventListener("scroll", function () {
+                const maxScrollValue = 12
+                const newScrollPos = window.scrollY
+                let scrollValue = newScrollPos - lastScrollPos
+                if (scrollValue > maxScrollValue) scrollValue = maxScrollValue
+                else if (scrollValue < -maxScrollValue) scrollValue = -maxScrollValue
+                speed = scrollValue
+                clearTimeout(timer)
+                timer = setTimeout(handleSpeedClear, 10)
+            })
         })
-        $('.marquee').addEventListener("scroll", function () {
-            const maxScrollValue = 12
-            const newScrollPos = window.scrollY
-            let scrollValue = newScrollPos - lastScrollPos
-            if (scrollValue > maxScrollValue) scrollValue = maxScrollValue
-            else if (scrollValue < -maxScrollValue) scrollValue = -maxScrollValue
-            speed = scrollValue
-            clearTimeout(timer)
-            timer = setTimeout(handleSpeedClear, 10)
-        })
-    
         function handleSpeedClear() {
             speed = 3
         }

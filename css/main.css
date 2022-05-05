@@ -38,7 +38,7 @@ a {
 .main {
     display: flex;
     flex-direction: column;
-    margin-top: var(--max-header);
+    /* margin-top: var(--max-header); */
 }
 .main section > *:not(.fullw) {
     max-width: var(--max-w);

@@ -67,6 +67,24 @@
         })
         return brandsHTML
     }
+    com.e.providers = function(childs) {
+        let brandsHTML = ''
+        childs.forEach(function(brand){
+            let fileSrc = './media/brands/' + brand[0].replace(/\s/g,'-') + '.png'
+            let i_brand = /*html*/ `
+                <div class="brand-g">
+                    <span class="brand-s">
+                        <img src="${fileSrc}" alt="${brand[0]}"/>
+                    </span>
+                    <div class="brand-p">
+                        <p>${brand[1]}</p>
+                    </div>
+                </div>
+            `
+            brandsHTML += i_brand
+        })
+        return brandsHTML
+    }
     // let elmnt = document.getElementById('inside')
     // let dom = /*html*/ ``
 
