@@ -111,7 +111,7 @@
     padding: 2px 4px;
     /* display: inline-block; */
     width: 100%;
-    margin-block-end: 10px;
+    margin-block-start: 10px;
 }
 .map #peru-cities ol {
     margin-inline-start: 4px;color: gray;
@@ -120,6 +120,11 @@
 .map #peru-cities li.on {
     background: var(--main-200);
     font-weight: bold;
+}
+section.best {
+    background: rgb(240, 240, 240);
+    padding-block-start: 20px;
+    padding-block-end: 100px;
 }
 .best .section {
     display: flex;
@@ -152,7 +157,6 @@
     font-size: var(--ts5);
 }
 
-
 .brands_g {
     overflow-x: hidden;
 }
@@ -160,8 +164,10 @@
     margin-block-start: 16px;
     display: block;
     position: relative;
+    width: 100%;
 }
-.brands_g .marquee:before, .brands_g .marquee:after {
+.brands_g .marquee:before,
+.brands_g .marquee:after {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -192,7 +198,8 @@
     display: flex;
     flex-wrap: nowrap;
 }
-.brands .brand-s {
+.brands .brand-s,
+.brands span.brand {
     width: 120px;
     height: 120px;
     margin: 20px;
@@ -206,7 +213,8 @@
     user-select: none;
     position: relative;
 }
-.brands .brand-s img {
+.brands .brand-s img,
+.brands span img {
     height: calc(100% - 30%);
     width: calc(100% - 30%);
     object-fit: contain;
@@ -270,12 +278,6 @@
     display: flex;
     padding: 12px;
 }
-.clients .access .embed {
-    background: white;
-    width: 100%;
-    flex: 1;
-    padding: 12px;
-}
 @media screen and (min-width: 800px) {
     .clients .access {
         flex-direction: row;
@@ -314,4 +316,13 @@
 .clients .access .cliente-btn i {
     position: absolute;
     width: var(--ts1);
+}
+.clients .access .embed {
+    background: white;
+    width: 100%;
+    flex: 1;
+    padding: 12px;
+}
+.clients .embed img {
+    width: 100%;
 }
