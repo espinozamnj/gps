@@ -58,13 +58,15 @@ section h1 {
     color: var(--main-500);
     width: fit-content;
     position: relative;
-    margin-left: calc(var(--ts2) * 2);
-    margin-block-end: 24px;
+    /* margin-left: calc(var(--ts2) * 2); */
+    /* margin-block-end: 24px; */
     padding: calc(var(--ts2) / 2) calc(var(--ts2) / 1);
     padding-left: 0;
-    border-bottom-width: var(--borderWidth);
-    border-bottom-color: var(--main-500);
-    border-bottom-style: solid;
+    /* border-bottom-width: var(--borderWidth); */
+    /* border-bottom-color: var(--main-500); */
+    /* border-bottom-style: solid; */
+    width: 100%;
+    text-align: center;
 }
 section h2 {
     font-family: var(--typo);

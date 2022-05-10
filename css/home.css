@@ -263,7 +263,7 @@ section.best {
 }  
 
 .clients {
-    background: var(--main-200);
+    background: var(--main-100);
     padding-top: 16px;
     padding-bottom: 80px;
 }
