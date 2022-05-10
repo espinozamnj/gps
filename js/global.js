@@ -16,7 +16,7 @@ Object.prototype.addEmt = function(str) {
         {ini: '></hr>',end: '/>'},
         {ini: '></img>',end: '/>'},
     ]
-    let checkHTML = str.replace(/(\\x3c|<)!--.+-->/gi, '')
+    let checkHTML = str.replace(/(<!--.*?-->)|(<!--[\S\s]+?-->)|(<!--[\S\s]*?$)/gi, '')
     checkTAG.forEach(function(c){
         checkHTML.replaceAll(c.ini, c.end)
     })

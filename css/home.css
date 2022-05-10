@@ -175,6 +175,7 @@ section.best {
     height: 100%;
     content: "";
     z-index: 1;
+    pointer-events: none;
 }
 .brands_g .marquee:before {
     left: 0;
@@ -230,29 +231,33 @@ section.best {
     display: flex;
     overflow: hidden;
     width: 100%;
-    flex-shrink: 0;
+    /* flex-shrink: 1; */
+    /* flex-basis: auto; */
+    flex-grow: 1;
 }
 .brands .brand-p {
     padding: 12px;
-    padding-block-start: 65px;padding-block-end: 40px;background-color: var(--main-100);
+    padding-block-start: 65px;
+    padding-block-end: 40px;
+    background-color: var(--main-100);
     border-radius: 12px;
     color: var(--main-700);
     font-family: var(--typo);
     font-size: var(--ts4);
-    flex: 1;
+    flex-grow: 1;
     transform: translateY(-50px);
 }
 .brands .brand-g {
     margin: 12px;
-    flex-shrink: 0;
-    max-width: 12%;
+    flex-shrink: 1;
+    width: 300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: stretch;
 }
 .brands .brand-s {
-    margin: 0;
+    margin: 0 auto;
     z-index: 2;
     background: white;
 }  
