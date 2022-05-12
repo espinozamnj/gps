@@ -55,6 +55,24 @@
     padding-top: var(--ts2);
     justify-content: flex-end;
 }
+  
+section.map {
+    position: relative;
+}
+section.map::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url('./media/logo-black.png');
+    z-index: -1;
+    background-size: 84%;
+    background-repeat: no-repeat;
+    background-position: -10% 90%;
+    opacity: 0.08;
+}
 .map .section {
     display: flex;
     margin-block-start: 24px;
