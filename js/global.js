@@ -73,6 +73,16 @@ Object.prototype.myorder = function () {
     }
     return order
 }
+Object.prototype.isvisible = function () {
+    let ts = this
+    const rect = ts.getBoundingClientRect()
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+}
 Object.prototype.inserJS = function (files) {
     let ts = this
     files.forEach(function(fileName){
