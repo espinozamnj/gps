@@ -66,9 +66,9 @@ section.map::before {
     right: 0;
     bottom: 0;
     top: 0;
-    background-image: url('./media/logo-black.png');
-    z-index: -1;
-    background-size: 84%;
+    background-image: url('./../media/roadlines.png');
+    z-index: 0;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: -10% 90%;
     opacity: 0.08;
@@ -77,6 +77,7 @@ section.map::before {
     display: flex;
     margin-block-start: 24px;
     gap: 24px;
+    position: relative;
 }
 @media screen and (max-width: 800px){
     .map .section {

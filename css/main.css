@@ -49,7 +49,8 @@ a {
 }
 section {
     width: 100%;
-    margin-block-start: calc(var(--ts1) * 2);
+    padding-block-start: calc(var(--ts1) * 2);
+    padding-block-end: calc(var(--ts1) * 2);
 }
 section h1 {
     background-color: transparent;
@@ -112,4 +113,101 @@ hr {
     border-width: var(--borderWidth) 0px 0px 0px;
     margin-block-start: 30px;
     margin-block-end: 48px;
+}
+.box-alert {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    padding-top: 36px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 16px;
+    z-index: 15;
+    display: flex;
+    align-items: flex-start;
+    color: white;
+    font-family: var(--typo);
+    font-size: var(--ts3);
+    transition: all var(--transition-s);
+}
+.box-alert.accepted {
+    transform: translateY(120%);
+}
+.box-alert::before {
+    content: "";
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--main-600);
+    opacity: 0.9;
+    z-index: -1;
+}
+.box-alert .msg {
+    flex-grow: 1;
+    margin-block-end: 26px;
+    font-size: var(--ts6);
+}
+.box-alert .options {
+    display: flex;
+}
+.box-alert .options > div {
+    padding: 6px 16px;
+    white-space: nowrap;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    font-size: var(--ts5);
+    transition: all var(--transition-g);
+}
+.box-alert .options .info {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+.box-alert .options > div:hover {
+    background-color: white;
+    border-color: white;
+    color: var(--main-500);
+}
+@media screen and (min-width: 800px) {
+    .box-alert {
+        flex-direction: row
+    }
+    .box-alert .options {
+        flex-direction: row;
+    }
+    .box-alert .options > div {
+        margin-inline-start: 8px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .box-alert {
+        flex-direction: column
+    }
+}
+@media screen and (max-width: 800px) and (min-width: 600px) { 
+    .box-alert .options {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 8px;
+    }
+}
+@media screen and (max-width: 600px) and (min-width: 100px) {
+    .box-alert::before {
+        opacity: 1;
+    }
+    .box-alert .options {
+        flex-direction: column;
+        width: 100%;
+    }
+    .box-alert .options > div {
+        margin-block-end: 8px;
+        flex-grow: 1;
+    }
 }
