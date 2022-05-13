@@ -70,7 +70,7 @@ section.map::before {
     z-index: 0;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: -10% 90%;
+    background-position: center bottom;
     opacity: 0.08;
 }
 .map .section {
@@ -175,7 +175,25 @@ section.best {
     font-family: var(--typo);
     font-size: var(--ts5);
 }
-
+section.brands {
+    background-image: url(./../media/market.jpg);
+    position: relative;
+}
+section.brands h1 {
+    color: white;
+    text-shadow: 0px 4px 12px var(--main-900);
+}
+section.brands::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.8;
+    background-color: var(--main-200);
+}
 .brands_g {
     overflow-x: hidden;
 }
@@ -185,16 +203,24 @@ section.best {
     position: relative;
     width: 100%;
 }
-.brands_g .marquee:before,
-.brands_g .marquee:after {
+.brands_g .marquee::before,
+.brands_g .marquee::after {
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     width: 170px;
-    height: 100%;
-    content: "";
+    height: 0;
+    /* height: 100%; */
     z-index: 1;
     pointer-events: none;
+}
+@media screen and (max-width: 800px) {
+    .brand-g .marquee::before,
+    .brand-g .marquee::after {
+        height: 0px;
+        width: 0px;
+    }
 }
 .brands_g .marquee:before {
     left: 0;

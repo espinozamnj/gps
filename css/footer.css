@@ -4,6 +4,20 @@
     background: var(--main-500);
     font-family: var(--typo);
 }
+.footer .foo {
+    display: flex;
+    overflow: hidden;
+}
+@media screen and (max-width: 800px){
+    .footer .foo {
+        flex-direction: column;
+    }
+    .footer .foo .foo-info .social a {
+        width: calc(var(--ts1) * 1.2);
+        height: calc(var(--ts1) * 1.2);
+        font-size: var(--ts3);
+    }
+}
 .footer .foo-bar {
     margin-block-start: 22px;
     background-color: var(--main-800);
@@ -13,10 +27,6 @@
     justify-content: space-between;
     padding: 6px 12px;
     font-size: var(--ts5);
-}
-.footer .foo {
-    display: flex;
-    overflow: hidden;
 }
 .footer .logo-left {
     width: 66%;

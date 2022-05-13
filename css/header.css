@@ -19,8 +19,24 @@
 .header .logoMain img {
     height: 100%;
 }
+.header .menu-btns {
+    height: 0px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    right: 0;
+    top: 100%;
+    overflow: hidden;
+    transition: all var(--transition-s);
+    transition-timing-function: ease-in-out;
+}
+.open-menu .menu-btns {
+    height: 100vh;
+}
 .header nav {
     display: flex;
+    transition: all var(--transition-s);
+    transition-timing-function: ease-in-out;
 }
 .header nav .btn-g:not(div:last-child) {
     border-color: transparent;
@@ -29,31 +45,28 @@
     color: white;
     border: none !important;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .menu-movil {
         display: inline-block;
+        margin-inline-end: 10px;
     }
     .header nav {
-        position: fixed;
+        position: absolute;
         z-index: 5;
-        top: var(--max-header);
-        left: 100%;
-        bottom: 0;
-        left: 0;
+        top: 0px;
+        left: 0px;
         width: 100%;
-        max-width: 500px;
+        right: 0px;
         background-color: white;
         flex-direction: column;
-        transform: translateX(-100%);
-        transition: all var(--transition-g);
-        transition-timing-function: ease-in-out;
+        transform: translateY(-100%);
     }
-    .scrolled .header nav {
-        top: var(--max-header);
+    .header nav .btn-g {
+        color: var(--main-800);
     }
     .open-menu .header nav {
-        transform: translateX(0%);
-        box-shadow: -4px 9px 8px 1px var(--main-900);
+        transform: translateY(0);
+        box-shadow: 0px 0px 6px 1px var(--main-900);
     }
     nav {
         padding-left: 8px;
@@ -65,7 +78,11 @@
         margin-block-end: 12px;
     }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
+    .header {
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
     .menu-movil {
         display: none;
     }
@@ -75,6 +92,7 @@
     .header nav .btn-g {
         font-size: var(--ts4);
         margin-inline-start: 10px;
+        white-space: nowrap;
     }
 }
 
