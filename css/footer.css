@@ -18,7 +18,10 @@
         font-size: var(--ts3);
     }
 }
-.footer .foo-bar {
+.footer .card * {
+    color: white;
+}
+foo-bar {
     margin-block-start: 22px;
     background-color: var(--main-800);
     color: white;

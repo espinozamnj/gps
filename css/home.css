@@ -71,7 +71,7 @@ section.map::before {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
-    opacity: 0.08;
+    opacity: 0.05;
 }
 .map .section {
     display: flex;
@@ -105,10 +105,13 @@ section.map::before {
     }
 }
 .map .title {
-    font-size: var(--ts2);
+    font-size: var(--ts3);
 }
 .map .info-map {
     font-family: var(--typo);
+}
+.map .info-map h1 {
+    text-align: left;
 }
 .map #map_peru *.enable{
     fill:var(--main-200);
@@ -165,19 +168,20 @@ section.best {
     box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, 0.26);
     max-width: 180px;
 }
-.best .card i {
+section.best .card i {
     margin-block-start: 12px;
     font-size: calc(var(--ts3) * 3);
     color: var(--main-500);
     margin-block-end: 12px;
 }
-.best .card p {
+section.best .card p {
     font-family: var(--typo);
     font-size: var(--ts5);
 }
 section.brands {
-    background-image: url(./../media/market.jpg);
+    background-image: url(./../media/estantes.jpg);
     position: relative;
+    padding-block-end: 0px;
 }
 section.brands h1 {
     color: white;

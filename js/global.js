@@ -2,6 +2,7 @@ var $$ = (d) => {return document.querySelectorAll(d)}
 var $ = (d) => {return $$(d)[0]}
 var db = $('body')
 var com = {
+    f: {},
     e: {},
 }
 

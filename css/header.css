@@ -19,17 +19,6 @@
 .header .logoMain img {
     height: 100%;
 }
-.header .menu-btns {
-    height: 0px;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    right: 0;
-    top: 100%;
-    overflow: hidden;
-    transition: all var(--transition-s);
-    transition-timing-function: ease-in-out;
-}
 .open-menu .menu-btns {
     height: 100vh;
 }
@@ -45,7 +34,18 @@
     color: white;
     border: none !important;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {    
+    .header .menu-btns {
+        height: 0px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        right: 0;
+        top: 100%;
+        overflow: hidden;
+        transition: all var(--transition-s);
+        transition-timing-function: ease-in-out;
+    }
     .menu-movil {
         display: inline-block;
         margin-inline-end: 10px;

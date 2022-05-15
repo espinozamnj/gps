@@ -46,16 +46,18 @@
         setTimeout(() => {
             moveSlide(0)
         }, 0)
-        /*
-        setInterval(function() {
-            let ant = a.querySelector('.slide-show').myorder()
-            let slides_length = a.querySelector('.slides').children.length
-            if (ant == slides_length - 1) {
-                moveSlide(0)
-            } else {
-                moveSlide(ant + 1)
+        setTimeout(function () {
+            if (true) {
+                setInterval(function() {
+                    let ant = a.querySelector('.slide-show').myorder()
+                    let slides_length = a.querySelector('.slides').children.length
+                    if (ant == slides_length - 1) {
+                        moveSlide(0)
+                    } else {
+                        moveSlide(ant + 1)
+                    }
+                }, 6e3)
             }
-        }, 2e3)
-        */
+        }, 6e3)
     })
 })()

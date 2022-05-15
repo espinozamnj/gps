@@ -48,7 +48,7 @@
     com.e.card = function(childs) {
         let cardsHTML = ''
         childs.forEach(function(card){
-            let i_card = /*html*/ `<div class="card">
+            let i_card = /*html*/ `<div class="card" viewport>
                 ${card['icon']}
                 <p>${card['text']}</p>
             </div>`
