@@ -85,6 +85,23 @@
         })
         return brandsHTML
     }
+    com.e.acordeon = function(options) {
+        let cardsHTML = ''
+        options.forEach(function(opt){
+            let cardHTML = /*html*/ `
+                <div class="ac-card">
+                    <button class="pnt">
+                        <div class="ac-title-card">${opt[0]}</div>
+                        <div class="ac-title-icon"></div>
+                    </button>
+                    <div class="ac-content">${opt[1]}</div>
+                </div>
+            `
+            cardsHTML += cardHTML
+        })
+        let acordeonHTML = /*html*/ `<div class="acordeon-e">${cardsHTML}</div>`
+        return acordeonHTML
+    }
     // let elmnt = document.getElementById('inside')
     // let dom = /*html*/ ``
 

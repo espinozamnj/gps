@@ -1,5 +1,5 @@
 (function(){
-    $('#require').inserJS(['map', 'slide', 'carrousel'])
+    $('#require').inserJS(['map', 'slide', 'carrousel', 'acordeon'])
     /*setTimeout(function() {
         var slider = tns({
             "container": "#base",

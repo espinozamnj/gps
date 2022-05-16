@@ -21,7 +21,7 @@
 .footer .card * {
     color: white;
 }
-foo-bar {
+.foo-bar {
     margin-block-start: 22px;
     background-color: var(--main-800);
     color: white;
