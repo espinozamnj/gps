@@ -17,6 +17,9 @@
     gap: var(--ts2);
     margin-block-start: 34px;
 }
+section.about {
+    padding-block-end: 0px;
+}
 @media screen and (max-width: 600px) {
     .about .details {
         flex-direction: column;
