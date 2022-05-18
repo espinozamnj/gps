@@ -4,12 +4,14 @@
     background: var(--main-500);
     font-family: var(--typo);
 }
-.footer > *:not(.foo-bar) {
+.footer > *:not(.foo-bar),
+.footer .best {
     margin: 0 auto;
     max-width: var(--max-w);
     width: 100%;
 }
 .footer .foo {
+    padding-block-start: 20px;
     display: flex;
     overflow: hidden;
 }
@@ -56,12 +58,18 @@
     margin-block-end: 6px;padding-left: 2em;
     position: relative;
 }
+.footer .best-foo {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    background-color: var(--main-300);
+}
 .footer .best {
     display: flex;
     padding: 12px;
     gap: 30px;
-    margin-block-end: 36px;
-    padding-block-start: 48px;
+    margin-block-end: 6px;
+    padding-block-start: 20px;
 }
 .footer .best .card {
     display: flex;

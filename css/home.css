@@ -139,8 +139,16 @@ section.map::before {
     margin-block-start: 10px;
 }
 .map #peru-cities ol {
-    margin-inline-start: 4px;color: gray;
+    color: rgb(129, 129, 129);
     font-size: var(--ts5);
+}
+.map #peru-cities ol span {
+    padding: 4px 8px 4px 4px;
+    transition: all var(--transition-f);
+}
+.map #peru-cities ol span:hover {
+    color: black;
+    background-color: var(--main-200);
 }
 .map #peru-cities li.on {
     background: var(--main-200);
@@ -248,7 +256,7 @@ section.brands::before {
 }
 .brands_g .inner p {
     overflow: hidden;
-    /* border-right: 2px solid red; */
+    text-align: center;
     display: flex;
     flex-wrap: nowrap;
 }
@@ -299,6 +307,9 @@ section.brands::before {
     font-size: var(--ts4);
     flex-grow: 1;
     transform: translateY(-50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .brands .brand-g {
     margin: 12px;

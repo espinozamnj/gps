@@ -1,5 +1,6 @@
 .picture {
     margin-block-start: 0;
+    padding-block-start: 0;
 }
 .back {
     height: 56.25vw;
@@ -43,6 +44,9 @@
     color: var(--main-900);
 }
 .name-city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: var(--ts3);
     font-weight: bold;
     margin-block-end: 2px;

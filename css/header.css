@@ -20,7 +20,7 @@
     height: 100%;
 }
 .open-menu .menu-btns {
-    height: 100vh;
+    height: 100vh !important;
 }
 .header nav {
     display: flex;

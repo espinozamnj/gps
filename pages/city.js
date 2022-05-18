@@ -1,31 +1,15 @@
 (function(){
     let lhash = location.hash
     lhash = lhash.replace('#', '')
+    let lhash_d = lhash.split('.')[0]
+    let lhash_c = lhash.split('.')[1]
     function returnHOME() {
         open('#','_self')
         setTimeout(function(){
             loadHTML('home')
         }, 2e2)
     }
-    if (typeof(data_cities[lhash]) == 'object') {
-        let city = data_cities[lhash]
-        $('.back').style.backgroundImage = 'url("./media/picture-city/' + city.picture + '.jpg")'
-        $('.back .h1').innerText = city['name']
-        let info = ''
-        city['cities'].forEach(function(ct){
-            let i_ct = /*html*/ `
-                <div class="info-city">
-                    <div class="name-city">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>${ct[0]}</span>
-                    </div>
-                    <div class="location">${ct[1]}</div>
-                </div>
-            `
-            info += i_ct
-        })
-        $('.locations').addEmt(info)
-    } else {
+    function errorPAGE() {
         $('.main').addEmt(/*html*/ `
             <section class="return">
                 <div>
@@ -53,6 +37,33 @@
         setTimeout(function() {
             returnHOME()
         }, 3500)
+    }
+    if (typeof(data_cities[lhash_d]) == 'object') {
+        let city = data_cities[lhash_d]
+        let this_info = []
+        city.cities.forEach(function(city_info){
+            if (encodeURIComponent(city_info[0].toLowerCase().trim()) == lhash_c) {
+                this_info.push(city_info)
+            }
+        })
+        if (this_info.length > 0) {
+            this_info = this_info[0]
+            $('.back').style.backgroundImage = 'url("./media/picture-city/' + city.picture + '.jpg")'
+            $('.back .h1').innerText = city['name'] + ' - ' + this_info[0]
+            let info = /*html*/ `
+                <div class="info-city">
+                    <div class="name-city">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>${this_info[1]}</span>
+                    </div>
+                </div>
+            `
+            $('.locations').addEmt(info)
+        } else {
+            errorPAGE()
+        }
+    } else {
+        errorPAGE()
     }
     $('.return .btn-g').on(['click'], function () {
         returnHOME()                

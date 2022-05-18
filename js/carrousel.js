@@ -5,8 +5,7 @@
         speed = 1.6
         let lastScrollPos = 0
         let timer
-        marquee.forEach(function (el) {
-            console.log(el)
+        marquee.forEach(function (el){
             const container = el.querySelector(".inner")
             const content = el.querySelector(".inner > *")
             //Get total width
