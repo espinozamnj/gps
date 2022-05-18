@@ -1,6 +1,8 @@
 (function(){
     setTimeout(function(){
-        $('[data-section=clients]').click()
+        setTimeout(function(){
+            $('[data-section=clients]').click()
+        }, 1e3)
         $$('.acordeon-e').forEmt(function(ac_e){
             ac_e.querySelectorAll('.ac-card').forEmt(
                 function(card){
@@ -21,6 +23,9 @@
                             )
                         }
                     })
+                    setTimeout(() => {
+                        card.style.height = (card.children[0].offsetHeight) + 'px'
+                    }, 1e2)
                 }
             )
         })

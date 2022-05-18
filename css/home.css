@@ -431,7 +431,7 @@ section.brands::before {
     transform: translateY(6px) rotate(225deg);
 }
 .clients .access .embed {
-    background: white;
+    background: transparent;
     width: 100%;
     flex: 1;
     padding: 12px;
