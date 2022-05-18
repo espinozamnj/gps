@@ -212,3 +212,26 @@ hr {
         flex-grow: 1;
     }
 }
+
+[viewport=true] {
+    transition-property: all !important;
+    transition-duration: 0.8s !important;
+    transition-delay: 0.3s !important;
+    transition-timing-function: ease-in !important;
+}
+[viewport][data-an=zoom] {
+    opacity: 0;
+    transform: scale(0.7);
+}
+[viewport=true][data-an=zoom] {
+    opacity: 1;
+    transform: scale(1);
+}
+[viewport][data-an=top] {
+    opacity: 0;
+    transform: translateY(250%);
+}
+[viewport=true][data-an=top] {
+    opacity: 1;
+    transform: translateY(0);
+}

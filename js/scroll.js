@@ -6,9 +6,9 @@
         views.forEmt(function(emt){
             if (emt.getAttribute(attr) == '') {
                 emt.setAttribute(attr, 'false')
-                console.log(emt)
             }
             if (emt.isvisible() && emt.getAttribute(attr) == 'false') {
+                // console.log(emt)
                 emt.setAttribute(attr, 'true')
             }
         })

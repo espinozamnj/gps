@@ -78,10 +78,10 @@ Object.prototype.isvisible = function () {
     let ts = this
     const rect = ts.getBoundingClientRect()
     return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.top < ((window.innerHeight || document.documentElement.clientHeight) * 0.8) &&
+        // rect.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+        // rect.left >= 0 &&
+        rect.bottom >= 0
     )
 }
 Object.prototype.inserJS = function (files) {
