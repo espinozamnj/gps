@@ -4,6 +4,11 @@
     background: var(--main-500);
     font-family: var(--typo);
 }
+.footer > *:not(.foo-bar) {
+    margin: 0 auto;
+    max-width: var(--max-w);
+    width: 100%;
+}
 .footer .foo {
     display: flex;
     overflow: hidden;
@@ -50,6 +55,27 @@
     color: white;
     margin-block-end: 6px;padding-left: 2em;
     position: relative;
+}
+.footer .best {
+    display: flex;
+    padding: 12px;
+    gap: 30px;
+    margin-block-end: 36px;
+    padding-block-start: 48px;
+}
+.footer .best .card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+.footer .best .card i {
+    font-size: calc(var(--ts1) * 1.2);
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    transform: translateY(8px);
+}
+.footer .best .card p {
+    font-size: var(--ts5);
 }
 .footer .data i {
     width: 2em;

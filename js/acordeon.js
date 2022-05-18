@@ -1,7 +1,7 @@
 (function(){
     setTimeout(function(){
         setTimeout(function(){
-            $('[data-section=clients]').click()
+            // $('[data-section=clients]').click()
         }, 1e3)
         $$('.acordeon-e').forEmt(function(ac_e){
             ac_e.querySelectorAll('.ac-card').forEmt(
