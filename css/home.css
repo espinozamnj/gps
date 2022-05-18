@@ -185,6 +185,7 @@ section.brands {
     background-image: url(./../media/estantes.jpg);
     position: relative;
     padding-block-end: 0px;
+    background-attachment: fixed;
 }
 section.brands h1 {
     color: white;
