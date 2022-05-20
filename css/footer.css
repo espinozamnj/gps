@@ -4,18 +4,32 @@
     background: var(--main-500);
     font-family: var(--typo);
 }
+/*
 .footer > *:not(.foo-bar),
 .footer .best {
     margin: 0 auto;
     max-width: var(--max-w);
     width: 100%;
-}
+}*/
 .footer .foo {
     padding-block-start: 20px;
     display: flex;
     overflow: hidden;
+    width: 100%;
 }
 @media screen and (max-width: 800px){
+    .footer .best-foo .best {
+        flex-direction: column;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .footer .best-foo .best .card i{
+        width: calc(var(--ts1) * 1.8);
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .footer .foo {
         flex-direction: column;
     }
@@ -30,7 +44,7 @@
 }
 .foo-bar {
     margin-block-start: 22px;
-    background-color: var(--main-800);
+    background-color: var(--main-900);
     color: white;
     display: flex;
     align-items: center;
@@ -38,13 +52,32 @@
     padding: 6px 12px;
     font-size: var(--ts5);
 }
+.footer .foo > * {
+    padding: 12px;
+    width: 25%;
+}
+.footer .foo * h3 {
+    color: white;
+    margin-block-end: 12px;
+    font-size: var(--ts4);
+}
+.footer .foo .info-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.footer .foo .info-list a {
+    text-align: start;
+    color: var(--main-100);
+    margin-block-end: 6px;
+}
+.footer .foo .info-list a:hover {
+    text-decoration: underline;
+}
 .footer .logo-left {
-    width: 66%;
     padding: 22px;
 }
 .footer .foo-info {
-    width: 33%;
-    padding: 12px;
     display: flex;
     flex-direction: column;
 }
@@ -59,15 +92,22 @@
     position: relative;
 }
 .footer .best-foo {
+    display: flex;
+    justify-content: center;
     width: 100%;
     min-width: 100%;
     max-width: 100%;
-    background-color: var(--main-300);
+    padding-block-end: 12px;
+    background-color: var(--main-700);
+    border-width: 0px;
+    border-bottom-width: var(--borderWidth);
+    border-color: white;
+    border-style: solid;
 }
 .footer .best {
     display: flex;
     padding: 12px;
-    gap: 30px;
+    gap: 50px;
     margin-block-end: 6px;
     padding-block-start: 20px;
 }
@@ -84,6 +124,7 @@
 }
 .footer .best .card p {
     font-size: var(--ts5);
+    max-width: 20vw;
 }
 .footer .data i {
     width: 2em;
@@ -96,6 +137,9 @@
 }
 .footer .foo-info .social {
     margin-block-start: 36px;
+}
+.footer .foo-info .social i {
+    color: var(--main-700);
 }
 .footer .foo-info .social a {
     font-size: var(--ts1);
