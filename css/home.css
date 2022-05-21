@@ -18,7 +18,7 @@
     margin-block-start: 34px;
 }
 section.about {
-    padding-block-end: 0px;
+    padding-block-end: 36px;
 }
 @media screen and (max-width: 600px) {
     .about .details {
@@ -306,7 +306,6 @@ section.brands::before {
     font-family: var(--typo);
     font-size: var(--ts4);
     flex-grow: 1;
-    transform: translateY(-50px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,6 +323,7 @@ section.brands::before {
     margin: 0 auto;
     z-index: 2;
     background: white;
+    transform: translateY(50px);
 }  
 
 .clients {
