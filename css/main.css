@@ -223,13 +223,17 @@ hr {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
     opacity: 0.10;
     background-image: url(./../media/pattern_shop.png);
     background-attachment: fixed;
     background-repeat-x: repeat;
     background-repeat-y: repeat;
     background-size: 130px;
+}
+.back-pattern > * {
+    position: relative;
+    z-index: 1;
 }
 [viewport=true] {
     transition-property: all !important;
