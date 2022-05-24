@@ -44,17 +44,26 @@
 }
 .foo-bar {
     margin-block-start: 22px;
-    background-color: var(--main-900);
+    margin-block-end: 22px;
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 6px 12px;
     font-size: var(--ts5);
 }
+.footer .foo-bar span:last-child {
+    padding-inline-start: 1em;
+}
+.footer .foo-bar span:not(span:last-child) {
+    padding-inline-end: 1em;
+    border-right-color: white;
+    border-right-width: 2px;
+    border-right-style: solid;
+}
 .footer .foo > * {
     padding: 12px;
-    width: 25%;
+    width: 33.3%;
 }
 .footer .foo * h3 {
     color: white;
@@ -143,10 +152,10 @@
     color: var(--main-700);
 }
 .footer .foo-info .social a {
-    font-size: var(--ts1);
+    font-size: var(--ts3);
     background: white;
-    width: calc(var(--ts1) * 2);
-    height: calc(var(--ts1) * 2);
+    width: calc(var(--ts3) * 2);
+    height: calc(var(--ts3) * 2);
     display: inline-flex;
     align-items: center;
     justify-content: center;
