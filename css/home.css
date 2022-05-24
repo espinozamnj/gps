@@ -56,6 +56,7 @@ margin-inline-end: 12px;}
     margin-block-start: 34px;
 }
 section.about {
+    padding-block-start: 16px;
     padding-block-end: 36px;
 }
 @media screen and (max-width: 600px) {
@@ -365,7 +366,7 @@ section.brands::before {
 }  
 
 .clients {
-    background: var(--main-100);
+    background-color: white;
     padding-top: 16px;
     padding-bottom: 30px;
 }
