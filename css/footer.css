@@ -44,19 +44,19 @@
 }
 .foo-bar {
     margin-block-start: 22px;
-    margin-block-end: 22px;
     color: white;
+    background-color: var(--main-700);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px 12px;
+    padding: 6px 24px;
     font-size: var(--ts5);
 }
-.footer .foo-bar span:last-child {
-    padding-inline-start: 1em;
+.footer .foo-bar span:not(span:first-child) {
+    padding-inline-start: 1.3em;
 }
 .footer .foo-bar span:not(span:last-child) {
-    padding-inline-end: 1em;
+    padding-inline-end: 1.3em;
     border-right-color: white;
     border-right-width: 2px;
     border-right-style: solid;
