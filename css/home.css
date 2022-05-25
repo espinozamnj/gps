@@ -378,7 +378,7 @@ section.brands::before {
 .clients {
     background-color: white;
     padding-top: 16px;
-    padding-bottom: 30px;
+    padding-block-end: 0px;
 }
 .clients h1 {
     background-color: transparent !important;
@@ -391,6 +391,7 @@ section.brands::before {
 .clients .access {
     display: flex;
     padding: 12px;
+    padding-block-end: 0px;
 }
 @media screen and (min-width: 800px) {
     .clients .access {
@@ -492,6 +493,7 @@ section.brands::before {
     width: 100%;
     flex: 1;
     padding: 12px;
+    padding-block-end: 0px;
 }
 .clients .embed img {
     width: 100%;
