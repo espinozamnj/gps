@@ -11,7 +11,7 @@
     --main-trs: #5b5eff71;
     --borderWidth: 2px;
     --typo: 'Poppins', sans-serif;
-    --ts1: 30px;
+    --ts1: 50px;
     --ts2: 24px;
     --ts3: 18px;
     --ts4: 16px;
@@ -20,7 +20,7 @@
     --transition-g: 0.3s;
     --transition-f: 0.15s;
     --transition-s: 0.6s;
-    --max-w: 800px;
+    --max-w: 900px;
     --max-header: 110px;
     --min-header: 76px;
 }

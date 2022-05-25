@@ -24,9 +24,16 @@
 .us .summary .item picture {
     height: inherit;
     overflow: hidden;
-margin-inline-end: 12px;}  
+    margin-inline-end: 32px;
+}
+.us .info h1 {
+    text-align: left;
+    padding-block-start: 0;
+}
+.us .summary .item > * {
+    width: 50%;
+}
 .us .summary .item .info {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }  
@@ -372,15 +379,11 @@ section.brands::before {
 }
 .clients h1 {
     background-color: transparent !important;
-    color: var(--main-500);
     margin-inline-start: 12px;
 }
 .clients h1::before {
     content: '';
     visibility: hidden;
-}
-.clients h1 {
-    color: var(--main-500);
 }
 .clients .access {
     display: flex;
