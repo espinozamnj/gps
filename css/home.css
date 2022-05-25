@@ -96,7 +96,7 @@ section.about {
     text-align: justify;
 }
 .about .picture {
-    height: calc(var(--ts1) * 10);
+    height: calc(var(--ts1) * 5);
     width: 100%;
     background-size: cover;
     margin-block-end: 16px;
