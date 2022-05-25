@@ -120,7 +120,7 @@ section.map::before {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
-    opacity: 0.09;
+    opacity: 0.05;
 }
 .map .section {
     display: flex;
@@ -179,13 +179,14 @@ section.map::before {
     list-style: circle;
 }
 .map #peru-cities li {
+    font-weight: bold;
     padding: 2px 4px;
     /* display: inline-block; */
     width: 100%;
     margin-block-start: 10px;
 }
 .map #peru-cities ol {
-    color: rgb(129, 129, 129);
+    color: rgb(46, 46, 46);
     font-size: var(--ts5);
 }
 .map #peru-cities ol span {
