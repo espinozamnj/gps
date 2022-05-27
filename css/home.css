@@ -66,45 +66,89 @@ section.about {
     padding-block-start: 16px;
     padding-block-end: 36px;
 }
-.cols {
+.services h1 {
+    text-align: start;
+}
+.services .list-row {
+    margin-block-start: 22px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+.services .list-row .row {
+    width: 100%;
+    display: flex;
+    gap: 22px;
+    margin-block-end: 32px;
+}
+.services .row .pic {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+    background: orange;
+    height: inherit;
+}
+.services .row .pic img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    object-fit: cover;
+    transition: all var(--transition-g);
+}
+.services .row .pic:hover img{
+    transform-origin: center;
+    transform: scale(1.15) rotate(2deg);
+}
+.services .row .info {
+    flex-grow: 0;
+}
+.services .row .info p:last-child {
+    margin-block-end: 22px;
+}
+.services .cols {
     display: flex;
 }
-.cols > * {
+.services .cols > * {
     display: flex;
     flex-direction: column;
 }
-.cols .gallery {
+.services .cols .gallery {
     flex-grow: 1;
 }
-.cols .info {
+.services .cols .info {
     width: 50%;
     align-items: flex-start;
     margin-inline-end: 20px;
 }
-.cols h1 {
+.services .cols h1 {
     text-align: start;
 }
-.cols .info .btn-c {
+.services .cols .info .btn-c {
     margin-block-start: 26px;
 }
-.cols .gallery .cover-pic {
+.services .cols .gallery .cover-pic {
     height: 50%;
     overflow: hidden;
     position: relative;
     margin-block-end: 12px;    
 }
-.cols .gallery .cover-pic img {
+.services .cols .gallery .cover-pic img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    transition: all var(--transition-g);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    transition: all var(--transition-g);
 }
-.cols .gallery .cover-pic:hover img{
+.services .cols .gallery .cover-pic:hover img{
     transform-origin: center;
     transform: scale(1.15) rotate(2deg);
 }

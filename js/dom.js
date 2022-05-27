@@ -13,7 +13,7 @@
         let inner = /*html*/ `<h2>${title}</h2>`
         return inner
     }
-    // https://source.unsplash.com/900x400?commerce
+    // https://source.unsplash.com/900x400?container
     com.e.carrousel = function(childs) {
         let slides = ''
         let progress = ''
