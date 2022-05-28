@@ -117,6 +117,20 @@ hr {
     margin-block-start: 30px;
     margin-block-end: 48px;
 }
+.return {
+    margin-block-end: 48px;
+}
+.return.error {
+    margin-block-start: calc(var(--max-header) * 2);
+}
+.return .btn-g {
+    padding-left: 24px;
+    padding-right: 36px;
+    width: fit-content;
+}
+.return .btn-g i {
+    margin-inline-end: 16px;
+}
 .box-alert {
     position: fixed;
     bottom: 0px;

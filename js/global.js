@@ -119,3 +119,38 @@ var loadHTML = function(fileName) {
         })
     })
 }
+function returnHOME() {
+    open('#','_self')
+    setTimeout(function(){
+        loadHTML('home')
+    }, 2e2)
+}
+function errorPAGE() {
+    $('.main').addEmt(/*html*/ `
+        <section class="return error">
+            <div>
+                <div class="alert">Sitio no encontrado</div>
+                <div class="pnt btn-g">
+                    <span>Regresando en</span>
+                    <strong>3</strong>
+                    <span>s.</span>
+                </div>
+            </div>
+            <div class="fullw bar">
+                <div class="bar-return"></div>
+            </div>
+        </section>
+    `)
+    let count_down_number = 2
+    let count_down = setInterval(function(){
+        if (count_down_number < 0) {
+            clearInterval(count_down)
+        } else {
+            $('.return .btn-g strong').innerText = count_down_number
+            count_down_number--
+        }
+    }, 1e3)
+    setTimeout(function() {
+        returnHOME()
+    }, 3500)
+}

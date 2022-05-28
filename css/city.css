@@ -1,3 +1,4 @@
+@import url('carrousel.css');
 .picture {
     margin-block-start: 0;
     padding-block-start: 0;
@@ -57,17 +58,6 @@
 .info-city .location {
     padding-inline-start: 32px;
 }
-.return {
-    margin-block-end: 48px;
-}
-.return .btn-g {
-    padding-left: 24px;
-    padding-right: 36px;
-    width: fit-content;
-}
-.return .btn-g i {
-    margin-inline-end: 16px;
-}
 .alert {
     font-size: var(--ts1);
     font-family: var(--typo);
@@ -102,5 +92,12 @@ strong {
     to {
         transform: scaleX(0%)
     }
+}
+.map-embed {
+    width: 100%;
+    min-height: 400px;
+    border-width: var(--borderWidth);
+    border-color: #cecece;;
+    border-style: solid;
 }
   
