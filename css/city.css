@@ -85,6 +85,15 @@ strong {
     height: 100%;
     transform-origin: center left;
 }
+.adress {
+    display: flex;
+}
+.adress > * {
+    width: 50%;
+}
+.adress .text h1 {
+    text-align: start;
+}
 @keyframes bar-to-left {
     from {
         transform: scaleX(100%)
