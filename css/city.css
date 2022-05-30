@@ -123,3 +123,20 @@ strong {
     columns: 2;
     font-size: var(--ts3);
 }
+section.brands {
+    background-image: url(./../media/estantes.jpg);
+    position: relative;
+    padding-block-end: 0px;
+    background-attachment: fixed;
+}
+section.brands::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.8;
+    background-color: var(--main-200);
+}
