@@ -64,7 +64,7 @@ Object.prototype.adjacent = function (same, others) {
 Object.prototype.myorder = function () {
     let ts = this, order = -1
     let chd = ts.parentNode.children
-    let z = chd.length, i = 0
+    let i = 0
     while (i < chd.length) {
         if (chd[i] == ts) {
             order = i

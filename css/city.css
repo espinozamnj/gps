@@ -100,4 +100,26 @@ strong {
     border-color: #cecece;;
     border-style: solid;
 }
-  
+.list-cities {
+    margin-block-start: 16px;
+}
+.list-cities ol {
+    margin-block-end: var(--ts6); padding-inline-start: var(--ts3);
+    position: relative;
+  }
+.list-cities ol::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    width: 4px;
+    border-radius: 2px;
+    background-color: black;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+.list-cities ul {
+    columns: 2;
+    font-size: var(--ts3);
+}

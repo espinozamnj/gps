@@ -34,7 +34,17 @@
                 `
             })
             $('.list-cities ul').addEmt(cities_list)
-            // add insert brands
+            $('.brands .inner div').addEmt(/*html*/ `
+                ${com.e.providers([
+                    ['3m','Soluciones innovadoras 3M para profesionales de diferentes áreas'],
+                    ['alicorp','Bienes de consumo comestibles'],
+                    ['backus','Producción de bebidas alcohólicas entre otras'],
+                    ['cartavio','Venta en general de bebidas alcohólicas'],
+                    ['cbc','Bebidas de consumo, no alcohólicas'],
+                    ['clorox','Productos para salud y limpieza'],
+                    ['colgate','Salud e higiene dental'],
+                ])}
+            `)
         } else {
             errorPAGE()
         }
