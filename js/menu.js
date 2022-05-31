@@ -12,4 +12,7 @@ setTimeout(function() {
             document.body.scrollTop = posY
         })
     })
+    $('#to-home').on(['click'], function(){
+        loadHTML('home')
+    })
 }, 1e3)
