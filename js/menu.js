@@ -1,7 +1,9 @@
-function chech_menu_nav() {
+(function() {
     $('.menu-movil').on(['click'], function() {
         $('.app').classList.toggle('open-menu')
     })
+})();
+function chech_menu_nav() {
     $$('nav [data-section]').forEmt(function(btnM) {
         btnM.on(['click'], function(){
             let hh = $('.header').offsetHeight / 5 * 5.5

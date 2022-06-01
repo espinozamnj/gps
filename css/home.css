@@ -22,6 +22,22 @@
     display: flex;
     align-items: stretch;
 }
+@media screen and (max-width: 800px) {
+    .us .summary .item {
+        flex-direction: column;
+    }
+    .us .summary .item > * {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 800px) {
+    .us .summary .item {
+        flex-direction: row;
+    }
+    .us .summary .item > * {
+        width: 50%;
+    }
+}
 .us .summary .item picture {
     height: inherit;
     overflow: hidden;
@@ -30,9 +46,6 @@
 .us .info h1 {
     text-align: left;
     padding-block-start: 0;
-}
-.us .summary .item > * {
-    width: 50%;
 }
 .us .summary .item .info {
     display: flex;
