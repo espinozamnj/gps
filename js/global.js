@@ -115,7 +115,23 @@ var loadHTML = function(fileName) {
                 css.rel = 'stylesheet'
                 css.href = './css/' + fileName + '.css'
                 require.appendChild(css)
-            })
+                setTimeout(function() {
+                    $('.menu-btns nav').innerHTML = /*html*/ `
+                        <div class="pnt btn-g" id="to-home">Inicio</div>
+                    `
+                    $$('[data-section-name]').forEmt(function(section) {
+                        let select = section.getAttribute('class')
+                        let name = section.getAttribute('data-section-name')
+                        let btn = document.createElement('a')
+                        btn.className = 'pnt btn-g'
+                        btn.setAttribute('data-section', select)
+                        btn.innerText = name
+                        $('.menu-btns nav').appendChild(btn)
+                    })
+                    chech_menu_nav()
+                }, 1e2)
+                document.body.scrollTop = 0
+            }, 0)
         })
     })
 }
