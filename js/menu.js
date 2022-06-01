@@ -16,4 +16,4 @@ function chech_menu_nav() {
         loadHTML('home')
     })
 }
-chech_menu_nav()
+chech_menu_nav();
