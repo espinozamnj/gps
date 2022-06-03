@@ -86,6 +86,9 @@ strong {
 .adress {
     display: flex;
 }
+.iframe-location {
+    margin-block-end: 36px;
+}
 @media screen and (max-width: 800px) {
     .adress {
         flex-direction: column;

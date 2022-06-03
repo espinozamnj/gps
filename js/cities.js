@@ -27,6 +27,9 @@
             $('.iframe-map').addEmt(/*html*/ `
                 <iframe class="map-embed" src="${city.embed}"></iframe>
             `)
+            $('.iframe-location').addEmt(/*html*/ `
+                <iframe class="map-embed" src="${city.dist}"></iframe>
+            `)
             let cities_list = ''
             city['available'].forEach(function(dist) {
                 cities_list +=  /*html*/ `
