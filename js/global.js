@@ -130,6 +130,7 @@ var loadHTML = function(fileName) {
                     })
                     chech_menu_nav()
                 }, 1e2)
+                $('.app').classList.remove('open-menu')
                 document.body.scrollTop = 0
             }, 0)
         })

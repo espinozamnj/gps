@@ -35,6 +35,8 @@
     .footer .foo {
         flex-direction: column;
     }
+}
+@media screen and (max-width: 600px) {
     .footer .foo .foo-info .social a {
         width: calc(var(--ts1) * 1.2);
         height: calc(var(--ts1) * 1.2);
@@ -68,7 +70,16 @@
 }
 .footer .foo > * {
     padding: 12px;
-    width: 33.3%;
+}
+@media screen and (max-width: 800px) {
+    .footer .foo > * {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .footer .foo > * {
+        width: 33.3%;
+    }
 }
 .footer .foo * h3 {
     color: white;
@@ -138,9 +149,18 @@
     -webkit-text-stroke: 1px white;
     transform: translateY(8px);
 }
+@media screen and (max-width: 800px) {
+    .footer .best .card p {
+        max-width: 100vw;
+    }
+}
+@media screen and (min-width: 800px) {
+    .footer .best .card p {
+        max-width: 20vw;
+    }
+}
 .footer .best .card p {
     font-size: var(--ts5);
-    max-width: 20vw;
 }
 .footer .data i {
     width: 2em;
