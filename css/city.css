@@ -145,6 +145,7 @@ strong {
 }
 section.brands h1 {
     color: white;
+    font-size: calc(var(--ts1) * 0.8);
     text-shadow: 0px 4px 12px var(--main-900);
 }
 section.brands {
