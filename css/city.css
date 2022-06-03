@@ -143,6 +143,10 @@ strong {
     columns: 2;
     font-size: var(--ts3);
 }
+section.brands h1 {
+    color: white;
+    text-shadow: 0px 4px 12px var(--main-900);
+}
 section.brands {
     background-image: url(./../media/estantes.jpg);
     position: relative;
