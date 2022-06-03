@@ -38,3 +38,17 @@
         --ts6: 12px;
     }
 }
+@media screen and (min-width: 800px) {
+    .screen {
+        min-height: 80vh;
+        height: 80vh;
+        max-height: 80vh;
+    }
+}
+@media screen and (max-width: 800px) {
+    .screen {
+        min-height: 50vh;
+        height: 120.25vw;
+        max-height: 50vh;
+    }
+}

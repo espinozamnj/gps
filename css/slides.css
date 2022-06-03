@@ -1,8 +1,5 @@
 .slide-cont {
     position: relative;
-    min-height: 56.25vw;
-    max-height: 70vh;
-    height: 100vh;
 }
 .slide-cont .slides {
     position: relative;

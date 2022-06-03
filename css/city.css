@@ -4,9 +4,6 @@
     padding-block-start: 0;
 }
 .back {
-    min-height: 56.25vw;
-    max-height: 70vh;
-    height: 100vh;
     position: relative;
     background-size: cover;
     background-attachment: fixed;

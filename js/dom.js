@@ -34,7 +34,7 @@
             progress += i_progress
         })
         let c_slide = /*html*/ `
-            <div class="slide-cont">
+            <div class="slide-cont screen">
                 <div class="slides">
                     ${slides}
                 </div>
