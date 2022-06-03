@@ -48,6 +48,7 @@
                     ['colgate','Salud e higiene dental'],
                 ])}
             `)
+            $('.brands h1').innerText += ' en ' + this_info[0]
         } else {
             errorPAGE()
         }
