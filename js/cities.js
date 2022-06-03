@@ -51,7 +51,8 @@
     } else {
         errorPAGE()
     }
+    /*
     $('.return .btn-g').on(['click'], function () {
         returnHOME()                
-    })
+    })*/
 })()

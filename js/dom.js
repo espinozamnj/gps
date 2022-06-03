@@ -22,7 +22,7 @@
                 <picture>
                     <img src="https://images.unsplash.com/photo-${slide.img}?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MDY2MzU5NA&ixlib=rb-1.2.1&q=80&w=900" title="${slide.title.toLowerCase()}" alt="${slide.title.toLowerCase()}"/>
                 </picture>
-                <div class="target">
+                <div class="target" style="display:none">
                     <div class="title">${slide.title}</div>
                     <div class="text">${slide.text}</div>
                 </div>

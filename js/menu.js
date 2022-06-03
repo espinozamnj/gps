@@ -15,7 +15,7 @@ function chech_menu_nav() {
         })
     })
     $('#to-home').on(['click'], function(){
-        loadHTML('home')
+        returnHOME()
     })
 }
 chech_menu_nav()
