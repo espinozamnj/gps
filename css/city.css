@@ -143,6 +143,24 @@ strong {
     columns: 2;
     font-size: var(--ts3);
 }
+/* CLONE */
+section.cities {
+    position: relative;
+}
+section.cities::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url('./../media/roadlines_.png');
+    z-index: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    opacity: 0.05;
+}
 section.brands h1 {
     color: white;
     font-size: calc(var(--ts1) * 0.8);
@@ -165,3 +183,4 @@ section.brands::before {
     opacity: 0.8;
     background-color: var(--main-200);
 }
+/* END CLONE */
