@@ -3,7 +3,7 @@
         $('.app').classList.toggle('open-menu')
     })
 })();
-function chech_menu_nav() {
+function check_menu_nav() {
     $$('nav [data-section]').forEmt(function(btnM) {
         btnM.on(['click'], function(){
             let hh = $('.header').offsetHeight / 5 * 5.5
@@ -18,4 +18,4 @@ function chech_menu_nav() {
         returnHOME()
     })
 }
-chech_menu_nav()
+check_menu_nav()

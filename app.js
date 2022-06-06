@@ -12,7 +12,11 @@ window.addEventListener('load', function(){
         ])
         setTimeout(function () {
             if (location.hash.length > 1) {
-                loadHTML('city')
+                if (location.hash.includes('.')) {
+                    loadHTML('city')
+                } else {
+                    loadHTML(location.hash.slice(1))
+                }
             } else {
                 loadHTML('home')
                 // loadHTML('about')

@@ -117,6 +117,9 @@ hr {
     margin-block-start: 30px;
     margin-block-end: 48px;
 }
+section.title {
+    margin-block-start: var(--max-header);
+}
 .return {
     margin-block-end: 48px;
 }

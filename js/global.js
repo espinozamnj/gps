@@ -96,6 +96,17 @@ Object.prototype.inserJS = function (files) {
         ts.appendChild(s)
     })
 }
+function check_page_go() {
+    let links = $$('[data-go-page]:not([data-go])')
+    links.forEach(function(link) {
+        link.setAttribute('data-go', '')
+        link.addEventListener('click', function() {
+            let direction = link.getAttribute('data-go-page')
+            location.hash = direction
+            loadHTML(direction)
+        })
+    })
+}
 var loadHTML = function(fileName) {
     $('.loader').classList.add('show')
     fetch('./pages/' + fileName + '.html').then(function (response) {
@@ -128,7 +139,8 @@ var loadHTML = function(fileName) {
                         btn.innerText = name
                         $('.menu-btns nav').appendChild(btn)
                     })
-                    chech_menu_nav()
+                    check_menu_nav()
+                    check_page_go()
                 }, 1e2)
                 $('.app').classList.remove('open-menu')
                 document.body.scrollTop = 0
