@@ -23,7 +23,6 @@ const data_cities = {
         dist: 'https://www.google.com/maps/d/embed?mid=10-E_khDgYVFUBtmxbkbGIHX5ZrWhrHw&ehbc=2E312F?1',
         cities: [
             ["Pucallpa", 'Calle Dinamarca #560'],
-            ["La Merced", 'Av. Comandante #630']
         ],
         available: [
             'junin - first',
