@@ -103,7 +103,7 @@
     position: fixed;
     height: var(--min-header);
     backdrop-filter: blur(4px) brightness(0.915) saturate(1.5);
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(66, 40, 133, 0.35);
     animation-name: down-header;
     animation-duration: 0.9s;
     animation-timing-function: ease-in-out;
