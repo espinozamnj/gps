@@ -1,0 +1,41 @@
+.bars {
+    /* height: 100%; */
+    position: relative;
+    padding-top: 100%;
+    width: 41px;
+    display: inline-block;
+    z-index: 10;
+}
+.bars span {
+    background: white;
+    height: 6px;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    border-radius: 6px;
+    transition: all 0.2s;
+    transform-origin: center;
+}
+.bars span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bars span:nth-child(1) {
+    top: 8%;
+}
+.bars span:nth-child(3) {
+    bottom: 8%;
+}
+.open-menu .bars span:nth-child(1) {
+    top: 50%;
+    transform: translateX(-9%) translateY(-50%) rotate(45deg);
+    width: 122%;
+}
+.open-menu .bars span:nth-child(2) {
+    width: 0px;
+}
+.open-menu .bars span:nth-child(3) {
+    bottom: 50%;
+    transform: translateX(-9%) translateY(50%) rotate(-45deg);
+    width: 122%;
+}
