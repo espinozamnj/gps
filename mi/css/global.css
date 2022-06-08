@@ -1,0 +1,54 @@
+:root {
+    --main-100: #fcedcc;
+    --main-200: #fada99;
+    --main-300: #f7c867;
+    --main-400: #f5b534;
+    --main-500: #f2a301;
+    --main-600: #c28201;
+    --main-700: #916201;
+    --main-800: #614100;
+    --main-900: #302100;
+    --main-trs: #f2a30171;
+    --borderWidth: 2px;
+    --typo: 'Poppins', sans-serif;
+    --transition-g: 0.3s;
+    --transition-f: 0.15s;
+    --transition-s: 0.6s;
+    --max-w: 900px;
+    --max-header: 110px;
+    --min-header: 76px;
+}
+@media screen and (min-width: 600px) {
+    :root {
+        --ts1: 50px;
+        --ts2: 24px;
+        --ts3: 18px;
+        --ts4: 16px;
+        --ts5: 14px;
+        --ts6: 12px;
+    }
+}
+@media screen and (max-width: 600px) {
+    :root {
+        --ts1: 28px;
+        --ts2: 24px;
+        --ts3: 18px;
+        --ts4: 16px;
+        --ts5: 14px;
+        --ts6: 12px;
+    }
+}
+@media screen and (min-width: 800px) {
+    .screen {
+        min-height: 80vh;
+        height: 80vh;
+        max-height: 80vh;
+    }
+}
+@media screen and (max-width: 800px) {
+    .screen {
+        min-height: 50vh;
+        height: 120.25vw;
+        max-height: 50vh;
+    }
+}

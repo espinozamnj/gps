@@ -1,0 +1,36 @@
+.btn-g {
+    border-style: solid;
+    border-width: var(--borderWidth);
+    border-color: var(--main-200);
+    padding: 6px 18px;
+    border-radius: 12px;
+    color: var(--main-500);
+    font-size: inherit;
+    position: relative;
+    cursor: pointer;
+    transition: all var(--transition-g);
+    overflow: visible;
+    font-family: var(--typo);
+}
+.btn-g:hover {
+    border-color: var(--main-500);
+    color: var(--main-100);
+}
+.btn-g::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: var(--main-500);
+    width: 0%;
+    transition: all var(--transition-f);
+    transition-timing-function: ease-in-out;
+    border-radius: 8px;
+}
+.btn-g:hover::before {
+    width: 100%;
+    transition: all var(--transition-s);
+}
