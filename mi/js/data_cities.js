@@ -1,20 +1,4 @@
 const data_cities = {
-    "lima": {
-        name: 'Lima',
-        picture: "lima",
-        embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30329.155178144276!2d-77.12012067492047!3d-12.027447726161686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cc3d52f51e01%3A0x1f75ae97fb12652c!2sAeropuerto%20Internacional%20Jorge%20Ch%C3%A1vez!5e0!3m2!1ses!2spe!4v1653776463632!5m2!1ses!2spe',
-        dist: 'https://www.google.com/maps/d/embed?mid=10-E_khDgYVFUBtmxbkbGIHX5ZrWhrHw&ehbc=2E312F?1',
-        cities: [
-            ["Lima", 'Calle Filipinas #844']
-        ],
-        available: [
-            'lim - first',
-            'lim - second',
-            'lim - three',
-            'lim - four',
-            'lim - five'
-        ],
-    },
     "junin": {
         name: 'Junín',
         picture: "junin",
@@ -22,7 +6,6 @@ const data_cities = {
         dist: 'https://www.google.com/maps/d/embed?mid=10-E_khDgYVFUBtmxbkbGIHX5ZrWhrHw&ehbc=2E312F?1',
         cities: [
             ["Huancayo", 'Calle Dinamarca #560'],
-            ["La Merced", 'Av. Comandante #630']
         ],
         available: [
             'junin - first',
@@ -30,22 +13,6 @@ const data_cities = {
             'junin - three',
             'junin - four',
             'junin - five'
-        ],
-    },
-    "piura": {
-        name: 'Piura',
-        picture: "piura",
-        embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.3569351196197!2d-80.62006398562887!3d-5.2064738539294195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904a108dcd3939a1%3A0xd8a6f76d130774f0!2sAeropuerto%20Internacional%20Guillermo%20Concha%20Iberico!5e0!3m2!1ses!2spe!4v1653776874361!5m2!1ses!2spe',
-        dist: 'https://www.google.com/maps/d/embed?mid=10-E_khDgYVFUBtmxbkbGIHX5ZrWhrHw&ehbc=2E312F?1',
-        cities: [
-            ["Piura", 'Calle Ayala #130']
-        ],
-        available: [
-            'piura - first',
-            'piura - second',
-            'piura - three',
-            'piura - four',
-            'piura - five'
         ],
     },
     "lambayeque": {
@@ -70,7 +37,6 @@ const data_cities = {
         embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18790.275749218847!2d-79.11699890251857!3d-8.08425334319539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3c0766af2a51%3A0x2d0c8b77c7b0a2f8!2sAeropuerto%20Internacional%20Capit%C3%A1n%20FAP%20Carlos%20Mart%C3%ADnez%20de%20Pinillos!5e0!3m2!1ses!2spe!4v1653776593755!5m2!1ses!2spe',
         dist: 'https://www.google.com/maps/d/embed?mid=10-E_khDgYVFUBtmxbkbGIHX5ZrWhrHw&ehbc=2E312F?1',
         cities: [
-            ["Trujillo", 'Av. San Francisco #1560'],
             ["Chepén", 'Av. Esmeraldas #892'],
         ],
         available: [
@@ -79,22 +45,6 @@ const data_cities = {
             'lib - three',
             'lib - four',
             'lib - five'
-        ],
-    },
-    "ancash": {
-        name: 'Áncash',
-        picture: "ancash",
-        embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25729.613659272938!2d-77.61410439791844!3d-9.350673371163957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a96a8d3b6a9ac3%3A0xd3d9413a70b322a9!2sComandante%20FAP%20Germ%C3%A1n%20Arias%20Graziani%20Airport!5e0!3m2!1ses!2spe!4v1653776741510!5m2!1ses!2spe',
-        dist: 'https://www.google.com/maps/d/embed?mid=10-E_khDgYVFUBtmxbkbGIHX5ZrWhrHw&ehbc=2E312F?1',
-        cities: [
-            ["Chimbote", 'Av. Amazonas #650']
-        ],
-        available: [
-            'anc - first',
-            'anc - second',
-            'anc - three',
-            'anc - four',
-            'anc - five'
         ],
     },
     "cajamarca": {
