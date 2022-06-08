@@ -1,14 +1,14 @@
 :root {
-    --main-100: #d1e4d9;
-    --main-200: #a3c8b2;
-    --main-300: #74ad8c;
-    --main-400: #469165;
-    --main-500: #18763f;
-    --main-600: #135e32;
-    --main-700: #0e4726;
-    --main-800: #0a2f19;
-    --main-900: #05180d;
-    --main-trs: #18763f71;
+    --main-100: #d1e4e3;
+    --main-200: #a3c8c7;
+    --main-300: #74adac;
+    --main-400: #469190;
+    --main-500: #187674;
+    --main-600: #135e5d;
+    --main-700: #0e4746;
+    --main-800: #0a2f2e;
+    --main-900: #051817;
+    --main-trs: #18767471;
     --borderWidth: 2px;
     --typo: 'Poppins', sans-serif;
     --transition-g: 0.3s;
