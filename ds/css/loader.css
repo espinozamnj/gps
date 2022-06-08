@@ -1,0 +1,58 @@
+.loader:not(.show) {
+    display: none;
+}
+.loader.show {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: var(--main-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.show .dot-overtaking {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--main-500);
+    margin: -1px 0;
+    box-shadow: 0 -20px 0 0;
+    animation: dotOvertaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+}
+.show .dot-overtaking::before,
+.show .dot-overtaking::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--main-800);
+    box-shadow: 0 -20px 0 0;
+}
+.show .dot-overtaking::before {
+    animation: dotOvertaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+    animation-delay: .3s;
+}
+.show .dot-overtaking::after {
+    animation: dotOvertaking 1.5s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+    animation-delay: .6s;
+}
+@keyframes dotOvertaking {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

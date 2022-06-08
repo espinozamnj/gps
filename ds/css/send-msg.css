@@ -1,0 +1,20 @@
+a.send-msg {
+    z-index: 5;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    padding: var(--ts5) var(--ts4);
+    background: rgb(0, 189, 47);
+    border-radius: 200px;
+    box-shadow: 0px 2px 21px -8px var(--main-800);
+    font-size: calc(var(--ts4) * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all var(--transition-g);
+}
+a.send-msg:hover {
+    background-color: rgb(32, 233, 82);
+    box-shadow: 0px 2px 15px -1px var(--main-800);
+}

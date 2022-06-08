@@ -1,0 +1,505 @@
+@import url('carrousel.css');
+@import url('slides.css');
+
+.main .slide-cont::before {
+    content: '';
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.322), transparent);
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+}
+/* CUSTOM */
+.us .summary {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 12px;
+}
+.us .summary .item {
+    display: flex;
+    align-items: stretch;
+}
+@media screen and (max-width: 800px) {
+    .us .summary .item {
+        flex-direction: column;
+    }
+    .us .summary .item > * {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 800px) {
+    .us .summary .item {
+        flex-direction: row;
+    }
+    .us .summary .item > * {
+        width: 50%;
+    }
+}
+.us .summary .item picture {
+    height: inherit;
+    overflow: hidden;
+    margin-inline-end: 32px;
+}
+.us .info h1 {
+    text-align: left;
+    padding-block-start: 0;
+}
+.us .summary .item .info {
+    display: flex;
+    flex-direction: column;
+}
+.us .summary .item picture img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all var(--transition-g);
+}
+.us .summary .item .info .more-detail {
+    display: flex;
+    margin-block-start: 12px;
+}
+.us .summary .item .info p {
+    text-align: justify;
+}
+.us .summary .item .info h2 {
+    margin-block-end: 12px;
+}
+.us .summary .item picture:hover img {
+    transform-origin: center;
+    transform: scale(1.15) rotate(2deg);
+}
+.about .details {
+    display: flex;
+    gap: var(--ts2);
+    margin-block-start: 34px;
+}
+section.about {
+    padding-block-start: 16px;
+    padding-block-end: 36px;
+}
+.services h1 {
+    text-align: start;
+}
+.services .list-row {
+    margin-block-start: 22px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+.services .list-row .row {
+    width: 100%;
+    display: flex;
+    gap: 22px;
+    margin-block-end: 32px;
+}
+@media screen and (max-width: 800px) {
+    .services .list-row .row {
+        flex-direction: column;
+    }
+    .services .row .pic {
+        height: calc(var(--ts1) * 9);
+    }
+}
+@media screen and (min-width: 800px) {
+    .services .list-row .row {
+        flex-direction: row;
+    }
+    .services .row .pic {
+        height: inherit;
+    }
+}
+.services .row .pic {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+    background: orange;
+}
+.services .row .pic img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    object-fit: cover;
+    transition: all var(--transition-g);
+}
+.services .row .pic:hover img{
+    transform-origin: center;
+    transform: scale(1.15) rotate(2deg);
+}
+.services .row .info {
+    flex-grow: 0;
+}
+.services .row .info h3 {
+    margin-block-end: 12px;
+}
+.services .row .info p {
+    text-align: justify;
+}
+.services .row .info p:last-child {
+    margin-block-end: 22px;
+}
+.services .cols {
+    display: flex;
+}
+.services .cols > * {
+    display: flex;
+    flex-direction: column;
+}
+.services .cols .gallery {
+    flex-grow: 1;
+}
+.services .cols .info {
+    width: 50%;
+    align-items: flex-start;
+    margin-inline-end: 20px;
+}
+.services .cols h1 {
+    text-align: start;
+}
+.services .cols .info .btn-c {
+    margin-block-start: 26px;
+}
+.services .cols .gallery .cover-pic {
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-block-end: 12px;    
+}
+.services .cols .gallery .cover-pic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all var(--transition-g);
+}
+.services .cols .gallery .cover-pic:hover img{
+    transform-origin: center;
+    transform: scale(1.15) rotate(2deg);
+}
+@media screen and (max-width: 600px) {
+    .about .details {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px;
+    }
+}
+@media screen and (min-width: 600px) {
+    .about .details {
+        flex-direction: row;
+    }
+    .about .detail {
+        max-width: 50%;
+    }
+}
+.about .h3 {
+    font-size: var(--ts3);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-block-end: 16px;
+    font-weight: bold;
+}
+.about .detail {
+    font-family: var(--typo);
+}
+.about .text {
+    font-size: var(--ts5);
+    text-align: justify;
+}
+.about .picture {
+    height: calc(var(--ts1) * 5);
+    width: 100%;
+    background-size: cover;
+    margin-block-end: 16px;
+}
+.about .btn-c {
+    display: flex;
+    padding-top: var(--ts2);
+    justify-content: flex-end;
+}
+  
+section.map {
+    position: relative;
+}
+section.map::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url('./../media/roadlines_.png');
+    z-index: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    opacity: 0.05;
+}
+.map .section {
+    display: flex;
+    margin-block-start: 24px;
+    gap: 24px;
+    position: relative;
+}
+@media screen and (max-width: 800px){
+    .map .section {
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 800px){
+    .map .section {
+        flex-direction: row;
+    }
+    .map .section .map-container {
+        width: 60%;
+        overflow: visible;
+        margin-inline-end: 24px;
+    }
+    .map .section .map-container svg {
+        width: 100%;
+        height: 100%;
+        /* transform-style: preserve-3d; */
+        /* transform: rotate3d(2, 2, 1, 320deg); */
+        filter: drop-shadow(-8px 7px 5px #00000097);
+    }
+    .map .section .info-map {
+        width: 40%;
+    }
+}
+.map .title {
+    font-size: var(--ts3);
+}
+.map .info-map {
+    font-family: var(--typo);
+}
+.map .info-map h1 {
+    text-align: left;
+}
+.map #map_peru *.enable{
+    fill:var(--main-200);
+    stroke:var(--main-100);
+}
+.map #map_peru *.on {
+    fill: var(--main-500);
+    stroke:var(--main-100);
+}
+.map #peru-cities {
+    margin: 0;
+    margin-block-start: 16px;
+    padding-left: 1.9em;
+    /* columns: 100px auto; */
+    column-gap: 2em;
+    list-style: circle;
+}
+.map #peru-cities li {
+    font-weight: bold;
+    padding: 2px 4px;
+    /* display: inline-block; */
+    width: 100%;
+    margin-block-start: 10px;
+}
+.map #peru-cities ol {
+    color: rgb(46, 46, 46);
+    font-size: var(--ts5);
+}
+.map #peru-cities ol span {
+    padding: 4px 8px 4px 4px;
+    transition: all var(--transition-f);
+}
+.map #peru-cities ol span:hover {
+    color: black;
+    background-color: var(--main-200);
+}
+.map #peru-cities li.on {
+    background: var(--main-200);
+    font-weight: bold;
+}
+section.best {
+    background: rgb(240, 240, 240);
+    padding-block-start: 20px;
+    padding-block-end: 100px;
+}
+.best .section {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-block-start: 36px;
+}
+.best .section .card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    background: var(--main-100);
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    border-width: var(--borderWidth);
+    box-shadow: 0px 3px 6px 0px rgb(0, 0, 0, 0.26);
+    max-width: 180px;
+}
+section.best .card i {
+    margin-block-start: 12px;
+    font-size: calc(var(--ts3) * 3);
+    color: var(--main-500);
+    margin-block-end: 12px;
+}
+section.best .card p {
+    font-family: var(--typo);
+    font-size: var(--ts5);
+}
+section.brands {
+    background-image: url(./../media/estantes.jpg);
+    position: relative;
+    padding-block-end: 0px;
+    background-attachment: fixed;
+}
+section.brands h1 {
+    color: white;
+    text-shadow: 0px 4px 12px var(--main-900);
+}
+section.brands::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.8;
+    background-color: var(--main-200);
+}
+.clients {
+    background-color: white;
+    padding-top: 16px;
+    padding-block-end: 0px;
+}
+.clients h1 {
+    background-color: transparent !important;
+    margin-inline-start: 12px;
+}
+.clients h1::before {
+    content: '';
+    visibility: hidden;
+}
+.clients .access {
+    display: flex;
+    padding: 12px;
+    padding-block-end: 0px;
+}
+@media screen and (min-width: 800px) {
+    .clients .access {
+        flex-direction: row;
+        gap: 12px;
+    }
+    .clients .access .info {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .clients .access {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .clients .access .info {
+        width: 100%;
+    }
+}
+.clients .access .info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+}
+.clients .access .info h1 {
+    text-align: start;
+}
+.clients .access .list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+.clients .access .cliente-btn {
+    background: white;
+    border: none;
+    padding: 8px 10px;
+    color: var(--main-500);
+    position: relative;
+    font-size: var(--ts3);
+    display: flex;
+}
+.clients .access .cliente-btn span {
+    padding-left: calc(var(--ts3) * 1.8);
+}
+.clients .access .cliente-btn i {
+    position: absolute;
+    width: var(--ts1);
+}
+.acordeon-e {
+    display: flex;
+    flex-direction: column;
+}
+.ac-card {
+    width: 100%;
+    margin-block-end: 10px;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+.ac-card button {
+    position: relative;
+    padding: 6px 16px;
+    font-size: var(--ts4);
+    width: 100%;
+    border-color: white;
+    border-style: solid;
+    border-width: var(--borderWidth);
+    text-align: left;
+    background: rgb(240, 240, 240);
+    color: var(--main-500);
+}
+.ac-card .ac-content {
+    padding: 12px;
+    font-size: var(--ts5);
+    background: white;
+}
+.ac-title-icon::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    transform: rotate(45deg);
+    width: 12px;
+    height: 12px;
+    border-left-width: 0;
+    border-right-width: var(--borderWidth);
+    border-top-width: 0;
+    border-bottom-width: var(--borderWidth);
+    border-style: solid;
+    border-color: var(--main-500);
+    display: inline-block;
+}
+.active .ac-title-icon::after {
+    transform: translateY(6px) rotate(225deg);
+}
+.clients .access .embed {
+    background: transparent;
+    width: 100%;
+    flex: 1;
+    padding: 12px;
+    padding-block-end: 0px;
+}
+.clients .embed img {
+    width: 100%;
+}

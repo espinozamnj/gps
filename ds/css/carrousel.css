@@ -1,0 +1,116 @@
+
+.brands_g {
+    overflow-x: hidden;
+}
+.brands_g .marquee {
+    margin-block-start: 16px;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.brands_g .marquee::before,
+.brands_g .marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 170px;
+    height: 0;
+    /* height: 100%; */
+    z-index: 1;
+    pointer-events: none;
+}
+@media screen and (max-width: 800px) {
+    .brand-g .marquee::before,
+    .brand-g .marquee::after {
+        height: 0px;
+        width: 0px;
+    }
+}
+.brands_g .marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #fff 10%, transparent 80%);
+}
+.brands_g .marquee:after {
+    right: 0;
+    background: linear-gradient(to left, white 10%, transparent 80%);
+}
+.brands_g .inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+    width: fit-content;
+    color: white;
+}
+.brands_g .inner p {
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.brands .brand-s,
+.brands span.brand {
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0px 3px 12px 0px rgb(0 0 0 / 17%);
+    border-radius: 50%;
+    overflow: hidden;
+    user-select: none;
+    position: relative;
+}
+.brands .brand-s img,
+.brands span img {
+    height: calc(100% - 30%);
+    width: calc(100% - 30%);
+    object-fit: contain;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    right: 15%;
+    bottom: 15%;
+    pointer-events: none;
+}
+.brands .providers,
+.brands .marquee .inner > div {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    /* flex-shrink: 1; */
+    /* flex-basis: auto; */
+    flex-grow: 1;
+}
+.brands .brand-p {
+    padding: 12px;
+    padding-block-start: 65px;
+    padding-block-end: 40px;
+    background-color: var(--main-100);
+    border-radius: 12px;
+    color: var(--main-700);
+    font-family: var(--typo);
+    font-size: var(--ts4);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.brands .brand-g {
+    margin: 12px;
+    flex-shrink: 1;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+}
+.brands .brand-s {
+    margin: 0 auto;
+    z-index: 2;
+    background: white;
+    transform: translateY(50px);
+}
