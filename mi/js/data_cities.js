@@ -35,7 +35,7 @@ const data_cities = {
         name: 'La Libertad',
         picture: "la-libertad",
         embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18790.275749218847!2d-79.11699890251857!3d-8.08425334319539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3c0766af2a51%3A0x2d0c8b77c7b0a2f8!2sAeropuerto%20Internacional%20Capit%C3%A1n%20FAP%20Carlos%20Mart%C3%ADnez%20de%20Pinillos!5e0!3m2!1ses!2spe!4v1653776593755!5m2!1ses!2spe',
-        dist: 'https://www.google.com/maps/d/embed?mid=10-E_khDgYVFUBtmxbkbGIHX5ZrWhrHw&ehbc=2E312F?1',
+        dist: 'https://www.google.com/maps/d/embed?mid=1zX3F5HaeVNCnzU3ebsDUlCYuqSVpKxU&ehbc=2E312F',
         cities: [
             ["Chepén", 'Av. Esmeraldas #892'],
         ],
