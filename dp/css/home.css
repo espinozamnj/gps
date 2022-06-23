@@ -47,15 +47,28 @@
     text-align: left;
     padding-block-start: 0;
 }
-.us .summary .item .info {
-    display: flex;
-    flex-direction: column;
-}
 .us .summary .item picture img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     transition: all var(--transition-g);
+}
+.us .summary .item .info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.us .summary .item .info::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 6em;
+    width: 6em;
+    background-image: url(./../media/sello_experiencia.png);
+    background-size: 100% 100%;
+    transform: translate(calc(-100% - 16px), 16px) rotate(-25deg) ;
+    z-index: 2;
 }
 .us .summary .item .info .more-detail {
     display: flex;
@@ -379,6 +392,9 @@ section.brands::before {
     z-index: 0;
     opacity: 0.8;
     background-color: var(--main-200);
+}
+.section.brands_g .marquee {
+    transform: translateY(-15%);
 }
 .clients {
     background-color: white;

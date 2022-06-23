@@ -37,7 +37,7 @@
 .header nav .btn-g:hover {
     color: white;
 } 
-@media screen and (max-width: 800px) {    
+@media screen and (max-width: 1000px) {    
     .header .menu-btns {
         height: 0px;
         position: absolute;
@@ -81,7 +81,7 @@
         margin-block-end: 12px;
     }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
     .header {
         overflow-x: hidden;
         overflow-y: visible;

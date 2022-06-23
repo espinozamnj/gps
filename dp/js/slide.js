@@ -43,11 +43,10 @@
                 }
             })
         })
-        setTimeout(() => {
-            moveSlide(0)
-        }, 0)
         setTimeout(function () {
+            moveSlide(0)
             if (true) {
+                a.querySelector('.slide-load-bar span').style.animationDuration = '6s'
                 setInterval(function() {
                     let ant = a.querySelector('.slide-show').myorder()
                     let slides_length = a.querySelector('.slides').children.length
@@ -58,6 +57,6 @@
                     }
                 }, 6e3)
             }
-        }, 6e3)
+        }, 0)
     })
 })()

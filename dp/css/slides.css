@@ -95,3 +95,35 @@
 .slide-cont .progress-slides .slide-bar:hover {
     opacity: 1;
 }
+.slide-cont .slide-load-bar {
+    height: 12px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 2;
+    overflow: hidden;
+}  
+.slide-cont .slide-load-bar span {
+    height: inherit;
+    background-color: var(--main-500);
+    display: block;
+    max-width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    animation-name: bar-progress;
+    animation-iteration-count: infinite;
+    animation-delay: var(--transition-s);
+    animation-timing-function: linear;
+}
+@keyframes bar-progress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}

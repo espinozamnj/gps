@@ -13,6 +13,8 @@
 }*/
 .footer .foo {
     padding-block-start: 20px;
+    padding-inline-start: 14px;
+    padding-inline-end: 14px;
     display: flex;
     overflow: hidden;
     width: 100%;
@@ -101,6 +103,7 @@
 }
 .footer .logo-left {
     padding: 22px;
+    padding-inline-start: 2px;
 }
 .footer .foo-info {
     display: flex;
