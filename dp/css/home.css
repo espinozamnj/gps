@@ -12,6 +12,22 @@
     width: 100%;
     height: 80px;
 }
+section.services {
+    position: relative;
+    background-image: url(./../media/services_wall.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+section.services::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: rgba(225, 225, 225, 0.8);
+}
 /* CUSTOM */
 .us .summary {
     display: flex;
@@ -396,58 +412,73 @@ section.brands::before {
 .section.brands_g .marquee {
     transform: translateY(-15%);
 }
-.clients {
-    background-color: white;
-    padding-top: 16px;
+section.clients {
     padding-block-end: 0px;
+    background-image: url(./../media/despensa_mountain.png);
+    background-size: cover;
+    position: relative;
 }
-.clients h1 {
+section.clients::before {
+    content: '';
+    background-color: rgba(225, 225, 225, 0.2);
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+section.clients > div {
+    position: relative;
+    z-index: 2;
+}
+section.clients h1 {
     background-color: transparent !important;
     margin-inline-start: 12px;
 }
-.clients h1::before {
+section.clients h1::before {
     content: '';
     visibility: hidden;
 }
-.clients .access {
+section.clients .access {
     display: flex;
     padding: 12px;
     padding-block-end: 0px;
 }
 @media screen and (min-width: 800px) {
-    .clients .access {
+    section.clients .access {
         flex-direction: row;
         gap: 12px;
     }
-    .clients .access .info {
+    section.clients .access .info {
         width: 40%;
     }
 }
 @media screen and (max-width: 800px) {
-    .clients .access {
+    section.clients .access {
         flex-direction: column;
         gap: 24px;
     }
-    .clients .access .info {
+    section.clients .access .info {
         width: 100%;
     }
 }
-.clients .access .info {
+section.clients .access .info {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
 }
-.clients .access .info h1 {
+section.clients .access .info h1 {
     text-align: start;
 }
-.clients .access .list {
+section.clients .access .list {
     display: flex;
     flex-direction: column;
     gap: 12px;
     flex-grow: 1;
 }
-.clients .access .cliente-btn {
+section.clients .access .cliente-btn {
     background: white;
     border: none;
     padding: 8px 10px;
@@ -456,10 +487,10 @@ section.brands::before {
     font-size: var(--ts3);
     display: flex;
 }
-.clients .access .cliente-btn span {
+section.clients .access .cliente-btn span {
     padding-left: calc(var(--ts3) * 1.8);
 }
-.clients .access .cliente-btn i {
+section.clients .access .cliente-btn i {
     position: absolute;
     width: var(--ts1);
 }

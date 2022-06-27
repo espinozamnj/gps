@@ -1,7 +1,10 @@
 (function() {
     $$('.slide-cont').forEmt(function(a) {
+        let count_seconds = 0
         let bars = a.querySelector('.progress-slides').children
+        let bar_bottom = a.querySelector('.slide-load-bar')
         function moveSlide(number) {
+
             if (!a.querySelector('.slide-show')) {
                 a.querySelector('.slides').lastChild.classList.add('slide-show')
             }
@@ -31,6 +34,10 @@
             nw.classList.add('slide-show')
             nw.style.transform = `translateX(${diffSignal[0]}100%)`
             setTimeout(function() {
+                count_seconds = 0
+                bar_bottom.innerHTML = ''
+                bar_bottom.addEmt(/*html*/ `<span></span>`)
+                bar_bottom.firstChild.style.animationDuration = '6s'
                 last.style.transform = `translateX(${diffSignal[1]}100%)`
                 nw.style.zIndex = '2'
                 nw.style.transform = `translateX(0)`
@@ -46,16 +53,21 @@
         setTimeout(function () {
             moveSlide(0)
             if (true) {
-                a.querySelector('.slide-load-bar span').style.animationDuration = '6s'
+                bar_bottom.classList.add('enabled')
                 setInterval(function() {
-                    let ant = a.querySelector('.slide-show').myorder()
-                    let slides_length = a.querySelector('.slides').children.length
-                    if (ant == slides_length - 1) {
-                        moveSlide(0)
+                    if (count_seconds == 6) {
+                        count_seconds = 0
+                        let ant = a.querySelector('.slide-show').myorder()
+                        let slides_length = a.querySelector('.slides').children.length
+                        if (ant == slides_length - 1) {
+                            moveSlide(0)
+                        } else {
+                            moveSlide(ant + 1)
+                        }
                     } else {
-                        moveSlide(ant + 1)
+                        count_seconds++
                     }
-                }, 6e3)
+                }, 1e3)
             }
         }, 0)
     })

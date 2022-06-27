@@ -41,9 +41,7 @@
                 <div class="progress-slides">
                     ${progress}
                 </div>
-                <div class="slide-load-bar">
-                    <span></span>
-                </div>
+                <div class="slide-load-bar"></div>
             </div>
         `
         return c_slide

@@ -95,7 +95,7 @@
 .slide-cont .progress-slides .slide-bar:hover {
     opacity: 1;
 }
-.slide-cont .slide-load-bar {
+.slide-cont .slide-load-bar.enabled {
     height: 12px;
     width: 100%;
     position: absolute;
@@ -111,11 +111,13 @@
     background-color: var(--main-500);
     display: block;
     max-width: 100%;
+    width: 0%;
     border-style: solid;
     border-width: 1px;
     border-color: white;
     animation-name: bar-progress;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     animation-delay: var(--transition-s);
     animation-timing-function: linear;
 }
